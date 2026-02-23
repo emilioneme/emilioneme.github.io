@@ -232,8 +232,10 @@
                     <div class="project-details hidden border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50">
                         <div class="p-6 space-y-6">
                             <div class="prose prose-sm max-w-none">
-                                <h2 class="text-lg font-semibold uppercase tracking-wider mb-2">MULTIPLAYER, SPLIT SCREEN, ARCADE SHOOTER</h2>
-                                <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                                <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
+                                    MULTIPLAYER, SPLIT SCREEN, ARCADE SHOOTER
+                                </h2>
+                                <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
                                     As a testament to those good old days when people gathered around a couch to play a single game where players battle against each other.
                                     
                                     In short: each player gets to decide their own playstyle; they each get to choose what wepaon they weild, what engine they wear, and what gadget they use.
@@ -297,6 +299,30 @@
                                         <img src="images/Evolve/grapple.png"        alt="grapplle"      class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
                                         <img src="images/Evolve/port.png"           alt="portal"        class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
                                         <img src="images/Evolve/trampoline.png"     alt="trampoline"    class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Gadgeds -->
+                            <div class="prose prose-sm max-w-none">
+                                <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="this.closest('.prose').querySelector('.section-toggle-gadgets').classList.toggle('hidden'); this.querySelector('.gadgets-icon').style.transform = this.closest('.prose').querySelector('.section-toggle-gadgets').classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';">
+                                    <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
+                                    Exibiting the Project
+                                </h2>
+                                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 gadgets-icon"></i>
+                                </div>
+                                <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                                    I had the opportunity to exhibit Evolve.exe at Goldsmiths University's Computing Degree Show 2024, where I got to see people playing the game and having fun with it. It was a great experience to see how people interacted with the game and how they enjoyed it.
+                                </p>
+                                <div class="section-toggle-gadgets hidden py-4">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <img src="images/Evolve/degreeSHow.jpg"        alt="degreeshow"      class="w-full h-full object-cover border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        <iframe 
+                                        src="https://www.youtube.com/embed/5KpX7_cAjro?si=hMDUxvV5gxhg_Dam" 
+                                        class="w-full h-full aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                        </iframe>
                                     </div>
                                 </div>
                             </div>
