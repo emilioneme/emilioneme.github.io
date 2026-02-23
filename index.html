@@ -93,6 +93,17 @@
         .dark ::-webkit-scrollbar-thumb:hover {
             background: #414141;
         }
+        .evolve-img {
+        width: 100%;
+        object-fit: cover;
+        border: 1px solid rgb(0 0 0 / 0.1);
+        filter: brightness(75%);
+        transition: all 0.3s;
+        }
+        .evolve-img:hover {
+            filter: brightness(100%);
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="bg-white text-black dark:bg-black dark:text-white selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black antialiased">
@@ -101,18 +112,18 @@
         <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-sm font-semibold uppercase tracking-wider hover-slide">Emilio Neme</a>
             <div class="flex items-center space-x-6">
-                <button id="theme-toggle" class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors" aria-label="Toggle dark mode">
-                    <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
-                    <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
-                </button>
                 <a href="#best-work" class="text-sm uppercase tracking-wider hover-slide flex items-center space-x-1">
-                    <span>Best Work</span>
+                    <span>Spotlight</span>
                     <i data-lucide="arrow-down" class="w-3 h-3"></i>
                 </a>
                 <a href="#projects" class="text-sm uppercase tracking-wider hover-slide flex items-center space-x-1">
                     <span>Projects</span>
                     <i data-lucide="arrow-down" class="w-3 h-3"></i>
                 </a>
+                <button id="theme-toggle" class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors" aria-label="Toggle dark mode">
+                    <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+                    <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+                </button>
             </div>
         </div>
     </nav>
@@ -183,7 +194,9 @@
     <section id="best-work" class=" bg-gray-50 dark:bg-neutral-900 py-20 px-6 border-t border-black/5 dark:border-white/5">
         <div class="max-w-4xl mx-auto">
             <div class="mb-12 text-center">
-                <h2 class="text-2xl font-semibold uppercase tracking-tight mb-2">Best Work</h2>
+                <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                    Spotlight
+                </h1>
                 <div class="h-px w-12 bg-black dark:bg-white mx-auto"></div>
             </div>
             <div class="space-y-6">
@@ -197,14 +210,16 @@
                                 <img src="images/Evolve/city.png" alt="Evolve.exe" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
                             </div>
                             <div class="p-6 md:w-2/3 flex flex-col justify-center">
-                                <h3 class="text-lg font-semibold uppercase tracking-wider mb-2">EVOLVE.exe</h3>
+                                <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                                    Evolve.exe
+                                </h1>
                                 <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                                     Couch Arcade Shooter, where players fight against each other to become the ultimate Host of the Server.
                                 </p>
                                 <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
                                     <span>Unity</span>
                                     <span>C#</span>
-                                    <span>2024 - 2025</span>
+                                    <span>2024-2025</span>
                                 </div>
                                 <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
                                     <span class="mr-2">View Details</span>
@@ -217,7 +232,7 @@
                     <div class="project-details hidden border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50">
                         <div class="p-6 space-y-6">
                             <div class="prose prose-sm max-w-none">
-                                <h3 class="text-lg font-semibold uppercase tracking-wider mb-2">MULTIPLAYER, SPLIT SCREEN, ARCADE SHOOTER</h3>
+                                <h2 class="text-lg font-semibold uppercase tracking-wider mb-2">MULTIPLAYER, SPLIT SCREEN, ARCADE SHOOTER</h2>
                                 <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                                     As a testament to those good old days when people gathered around a couch to play a single game where players battle against each other.
                                     
@@ -237,19 +252,19 @@
                                     <h3 class="text-lg font-semibold uppercase tracking-wider">Weapons</h3>
                                     <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 weapons-icon"></i>
                                 </div>
-                                <div class="section-toggle-weapons hidden">
-                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                        <img src="images/Evolve/disc.png"       alt="disc"          class="w-full h-30 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
-                                        <img src="images/Evolve/fireWork.png"   alt="firework"      class="w-full h-30 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
-                                        <img src="images/Evolve/crystalGun.png" alt="crystal gun"   class="w-full h-30 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
-                                        <img src="images/Evolve/sword.png"      alt="sword"         class="w-full h-30 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
-                                        <img src="images/Evolve/spear.png"      alt="spear"         class="w-full h-30 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
-                                        <img src="images/Evolve/taser.png"      alt="taser"         class="w-full h-30 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
-                                    </div>
-                                </div>
                                 <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                                 Even though there is two types of weapons: ranged and melee, each wepaon has their own unique mechanics, and they all feel different to use. Some are serve as counters for others, but they all have their own strengths and weaknesses.
                                 </p>
+                                <div class="section-toggle-weapons hidden py-4">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                        <img src="images/Evolve/disc.png"       alt="disc"          class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        <img src="images/Evolve/fireWork.png"   alt="firework"      class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        <img src="images/Evolve/crystalGun.png" alt="crystal gun"   class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        <img src="images/Evolve/sword.png"      alt="sword"         class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        <img src="images/Evolve/spear.png"      alt="spear"         class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        <img src="images/Evolve/taser.png"      alt="taser"         class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                    </div>
+                                </div>
                             </div>
                             <!-- Engines -->
                             <div class="prose prose-sm max-w-none">
@@ -257,16 +272,16 @@
                                     <h3 class="text-lg font-semibold uppercase tracking-wider">Engines</h3>
                                     <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 engines-icon"></i>
                                 </div>
-                                <div class="section-toggle-engines hidden">
-                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                        <img src="images/Evolve/pogo.png"        alt="grapplle"      class="w-full h-30 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
-                                        <img src="images/Evolve/jetpack.png"     alt="trampoline"    class="w-full h-30 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
-                                        <img src="images/Evolve/speed.png"       alt="portal"        class="w-full h-30 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
-                                    </div>
-                                </div>
                                 <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                                     Engines will determine how the player moves around the map. Either, taking advantage of the verticality of the map or just simply getting around faster.
                                 </p>
+                                <div class="section-toggle-engines hidden py-4">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                        <img src="images/Evolve/pogo.png"        alt="grapplle"      class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        <img src="images/Evolve/jetpack.png"     alt="trampoline"    class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        <img src="images/Evolve/speed.png"       alt="portal"        class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                    </div>
+                                </div>
                             </div>
                             <!-- Gadgeds -->
                             <div class="prose prose-sm max-w-none">
@@ -274,16 +289,16 @@
                                     <h3 class="text-lg font-semibold uppercase tracking-wider">Gadgets</h3>
                                     <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 gadgets-icon"></i>
                                 </div>
-                                <div class="section-toggle-gadgets hidden">
-                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                        <img src="images/Evolve/grapple.png"        alt="grapplle"      class="w-full h-30 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
-                                        <img src="images/Evolve/port.png"           alt="portal"        class="w-full h-30 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
-                                        <img src="images/Evolve/trampoline.png"     alt="trampoline"    class="w-full h-30 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
-                                    </div>
-                                </div>
                                 <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                                     Gadgets are items that provide utility to the player, either in compbat or in movement. Providing addiional ways of getting around the map. They provide the player the space control that the engines dont provide themselves.
                                 </p>
+                                <div class="section-toggle-gadgets hidden py-4">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                        <img src="images/Evolve/grapple.png"        alt="grapplle"      class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        <img src="images/Evolve/port.png"           alt="portal"        class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        <img src="images/Evolve/trampoline.png"     alt="trampoline"    class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -307,7 +322,9 @@
     <section id="projects" class=" bg-gray-50 dark:bg-neutral-900 py-20 px-6 border-t border-black/5 dark:border-white/5">
         <div class="max-w-4xl mx-auto">
             <div class="mb-12 text-center">
-                <h2 class="text-2xl font-semibold uppercase tracking-tight mb-2">Projects</h2>
+                <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                  Projects
+                </h1>
                 <div class="h-px w-12 bg-black dark:bg-white mx-auto"></div>
             </div>
             <div class="space-y-6">
@@ -431,7 +448,7 @@
                 </a>
             </nav>
             <p class="mt-8 text-xs text-gray-400 dark:text-gray-600 uppercase tracking-widest">
-                Emilio Neme @ emilioneme22@gmail.com
+                Emilio Neme © 2026. All rights reserved.
             </p>
         </div>
     </section>
@@ -489,7 +506,7 @@
             }
             
             // Re-initialize icons in case new ones appeared
-            lucide.createIcons();
+            //lucide.createIcons();
         }
         
         // Respect system preference if no localStorage
