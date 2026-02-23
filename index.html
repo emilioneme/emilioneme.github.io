@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emilio Neme — Creative Programmer</title>
+    <link rel="icon" href="images/MiniMeIsoLeft.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['"IBM Plex Mono"', 'monospace'],
+                    },
+                    colors: {
+                        black: '#000000',
+                        white: '#ffffff',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .hover-slide {
+            position: relative;
+            display: inline-block;
+        }
+        .hover-slide::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: currentColor;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+        .hover-slide:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        
+        /* Smooth transitions for dark mode */
+        *, *::before, *::after {
+            transition-property: background-color, border-color, color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        
+        /* Custom scrollbar for dark mode consistency */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #333;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #999;
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #414141;
+        }
+    </style>
+</head>
+<body class="bg-white text-black dark:bg-black dark:text-white selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 dark:bg-black/90 backdrop-blur-sm z-50 border-b border-black/10 dark:border-white/10">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-sm font-semibold uppercase tracking-wider hover-slide">Emilio Neme</a>
+            <div class="flex items-center space-x-6">
+                <button id="theme-toggle" class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors" aria-label="Toggle dark mode">
+                    <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+                    <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+                </button>
+                <a href="#best-work" class="text-sm uppercase tracking-wider hover-slide flex items-center space-x-1">
+                    <span>Best Work</span>
+                    <i data-lucide="arrow-down" class="w-3 h-3"></i>
+                </a>
+                <a href="#projects" class="text-sm uppercase tracking-wider hover-slide flex items-center space-x-1">
+                    <span>Projects</span>
+                    <i data-lucide="arrow-down" class="w-3 h-3"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col items-center justify-center p-6 pt-20">
+        <main class="max-w-md w-full flex flex-col items-center text-center space-y-8 fade-in">
+            <!-- Logo -->
+            <div class="w-[300px] h-[450px] fade-in opacity-0 bg-gray-100 dark:bg-gray-100 rounded-full flex items-center justify-center" style="animation-fill-mode: forwards;">
+                <img src="images/MiniMeIsoLeft.png" alt="Emilio Neme Logo" class="w-full h-full object-cover rounded-full border border-black/1 dark:border-white/20 contrast-125">
+            </div>
+            
+            <!-- Header Section -->
+            <div class="space-y-2 stagger-1 fade-in opacity-0" style="animation-fill-mode: forwards;">
+                <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                    Emilio Neme
+                </h1>
+                <div class="h-px w-12 bg-black dark:bg-white mx-auto"></div>
+                <p class="text-sm text-gray-600 dark:text-gray-400 uppercase tracking-widest">
+                    Creative Programmer
+                </p>
+            </div>
+
+            <!-- Description -->
+            <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 max-w-xs stagger-2 fade-in opacity-0" style="animation-fill-mode: forwards;">
+                Game Development, C# Programming, Unity Developer, Game Design, Interactive Design 
+            </p>
+
+            <!-- Links Grid -->
+            <nav class="w-full space-y-4 stagger-3 fade-in opacity-0" style="animation-fill-mode: forwards;">
+                <div class="flex flex-col space-y-3 text-sm">
+                    <a href="https://eneme22.itch.io/" target="_blank" rel="noopener noreferrer" 
+                       class="group flex items-center justify-center space-x-3 py-2 hover-slide transition-colors hover:text-gray-600 dark:hover:text-gray-400">
+                        <i data-lucide="gamepad-2" class="w-4 h-4"></i>
+                        <span class="uppercase tracking-wider">Itch.io</span>
+                        <span class="text-xs text-gray-400 dark:text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                    </a>
+                    <a href="https://github.com/emilioneme" target="_blank" rel="noopener noreferrer" 
+                       class="group flex items-center justify-center space-x-3 py-2 hover-slide transition-colors hover:text-gray-600 dark:hover:text-gray-400">
+                        <i data-lucide="github" class="w-4 h-4"></i>
+                        <span class="uppercase tracking-wider">GitHub</span>
+                        <span class="text-xs text-gray-400 dark:text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/emilio-neme-82360a240/" target="_blank" rel="noopener noreferrer" 
+                       class="group flex items-center justify-center space-x-3 py-2 hover-slide transition-colors hover:text-gray-600 dark:hover:text-gray-400">
+                        <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        <span class="uppercase tracking-wider">LinkedIn</span>
+                        <span class="text-xs text-gray-400 dark:text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                    </a>
+                    <a href="mailto:emilioneme22@gmail.com" 
+                       class="group flex items-center justify-center space-x-3 py-2 hover-slide transition-colors hover:text-gray-600 dark:hover:text-gray-400">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        <span class="uppercase tracking-wider">Email</span>
+                        <span class="text-xs text-gray-400 dark:text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Footer -->
+            <footer class="pt-8 text-xs text-gray-400 dark:text-gray-600 uppercase tracking-widest stagger-4 fade-in opacity-0" style="animation-fill-mode: forwards;">
+                <span class="inline-block w-2 h-2 bg-green-500 dark:bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                Available for work
+            </footer>
+        </main>
+    </section>
+
+    <!-- Best Work Section -->
+    <section id="best-work" class=" bg-gray-50 dark:bg-neutral-900 py-20 px-6 border-t border-black/5 dark:border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-12 text-center">
+                <h2 class="text-2xl font-semibold uppercase tracking-tight mb-2">Best Work</h2>
+                <div class="h-px w-12 bg-black dark:bg-white mx-auto"></div>
+            </div>
+            <div class="space-y-6">
+                
+                <!-- Evolve -->
+                <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5" onclick="toggleProject(this)">
+                    <div class="p-0">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/7 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
+                                <img src="images/Evolve/city.png" alt="Evolve.exe" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
+                            </div>
+                            <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                                <h3 class="text-lg font-semibold uppercase tracking-wider mb-2">EVOLVE.exe</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                    Couch Arcade Shooter, where players fight against each other to become the ultimate Host of the Server.
+                                </p>
+                                <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
+                                    <span>Unity</span>
+                                    <span>C#</span>
+                                    <span>2024 - 2025</span>
+                                </div>
+                                <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
+                                    <span class="mr-2">View Details</span>
+                                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 project-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Expanded Content -->
+                    <div class="project-details hidden border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50">
+                        <div class="p-6 space-y-6">
+                            <iframe 
+                                    src="https://www.youtube.com/embed/OQO6xi2V6go?si=ajK21A5lhagIR5cE" 
+                                    class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            <div class="prose prose-sm max-w-none">
+                                <h3 class="text-lg font-semibold uppercase tracking-wider mb-2">SPLIT SCREEN!</h3>
+                                <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                                   As a testament to those good old days when people gathered around a couch to play a single game where players battle against each other. In short: each player gets to decide their own lodout; they each get to choose what wepaon they weild, what engine they wear, and what gadget they use.
+                                </p>
+                            </div>
+                            <div class="prose prose-sm max-w-none">
+                                <h3 class="text-lg font-semibold uppercase tracking-wider mb-2">Weapons</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <img src="images/Evolve/disc.png"       alt="disc"          class="w-full h-60 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
+                                    <img src="images/Evolve/fireWork.png"   alt="firework"      class="w-full h-60 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
+                                    <img src="images/Evolve/crystalGun.png" alt="crystal gun"   class="w-full h-60 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
+                                    <img src="images/Evolve/sword.png"      alt="sword"         class="w-full h-60 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
+                                    <img src="images/Evolve/taser.png"      alt="taser"         class="w-full h-60 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
+                                    <img src="images/Evolve/spear.png"      alt="spear"         class="w-full h-60 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Links (persistent footer) -->
+                    <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
+                        <a href="https://eneme22.itch.io/evolve" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                            <span>Play on Itch.io</span>
+                        </a>
+                        <a href="https://github.com/emilioneme/EVOLVE.exe" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            <span>Source Code</span>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class=" bg-gray-50 dark:bg-neutral-900 py-20 px-6 border-t border-black/5 dark:border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-12 text-center">
+                <h2 class="text-2xl font-semibold uppercase tracking-tight mb-2">Projects</h2>
+                <div class="h-px w-12 bg-black dark:bg-white mx-auto"></div>
+            </div>
+            <div class="space-y-6">
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5" onclick="toggleProject(this)">
+                    <div class="p-0">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 h-48 md:h-auto overflow-hidden bg-gray-100 dark:bg-neutral-800">
+                                <img src="images/project2-thumb.jpg" alt="Project 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 grayscale hover:grayscale-0">
+                            </div>
+                            <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                                <h3 class="text-lg font-semibold uppercase tracking-wider mb-2">Project Title Two</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                    Another compelling project description. Highlight the key features and gameplay elements that define this work.
+                                </p>
+                                <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
+                                    <span>Unreal Engine</span>
+                                    <span>Blueprint</span>
+                                    <span>2023</span>
+                                </div>
+                                <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
+                                    <span class="mr-2">View Details</span>
+                                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 project-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Expanded Content -->
+                    <div class="project-details hidden border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50">
+                        <div class="p-6 space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <img src="http://static.photos/technology/640x360/5" alt="Screenshot 1" class="w-full h-48 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
+                                <img src="http://static.photos/technology/640x360/6" alt="Screenshot 2" class="w-full h-48 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
+                            </div>
+                            <div class="prose prose-sm max-w-none">
+                                <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                                    Detailed description of the second project. Explain the technical implementation, 
+                                    design philosophy, and any interesting algorithms or systems you developed.
+                                </p>
+                            </div>
+                            <div class="flex space-x-4 pt-4 border-t border-black/10 dark:border-white/10">
+                                <a href="#" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                    <span>Play on Itch.io</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5" onclick="toggleProject(this)">
+                    <div class="p-0">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 h-48 md:h-auto overflow-hidden bg-gray-100 dark:bg-neutral-800">
+                                <img src="images/project3-thumb.jpg" alt="Project 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 grayscale hover:grayscale-0">
+                            </div>
+                            <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                                <h3 class="text-lg font-semibold uppercase tracking-wider mb-2">Project Title Three</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                    A third project showcasing different skills or genres. Keep descriptions concise but engaging.
+                                </p>
+                                <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
+                                    <span>Godot</span>
+                                    <span>GDScript</span>
+                                    <span>2023</span>
+                                </div>
+                                <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
+                                    <span class="mr-2">View Details</span>
+                                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 project-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Expanded Content -->
+                    <div class="project-details hidden border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50">
+                        <div class="p-6 space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <img src="images/project3-screenshot1.jpg" alt="Screenshot 1" class="w-full h-48 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
+                                <img src="images/project3-screenshot2.jpg" alt="Screenshot 2" class="w-full h-48 object-cover border border-black/10 dark:border-white/10 grayscale hover:grayscale-0 transition-all">
+                            </div>
+                            <div class="prose prose-sm max-w-none">
+                                <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                                    Expanded content for the third project. Add as much detail as needed to fully explain 
+                                    the scope and complexity of the work.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Links Section -->
+    <section class="py-16 px-6 bg-white dark:bg-black border-t border-black/10 dark:border-white/10">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="h-px w-12 bg-black dark:bg-white mx-auto mb-8"></div>
+            <nav class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-sm">
+                <a href="https://eneme22.itch.io/" target="_blank" rel="noopener noreferrer" 
+                   class="group flex items-center space-x-2 hover-slide transition-colors hover:text-gray-600 dark:hover:text-gray-400">
+                    <i data-lucide="gamepad-2" class="w-4 h-4"></i>
+                    <span class="uppercase tracking-wider">Itch.io</span>
+                </a>
+                <a href="https://github.com/emilioneme" target="_blank" rel="noopener noreferrer" 
+                   class="group flex items-center space-x-2 hover-slide transition-colors hover:text-gray-600 dark:hover:text-gray-400">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                    <span class="uppercase tracking-wider">GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/emilio-neme-82360a240/" target="_blank" rel="noopener noreferrer" 
+                   class="group flex items-center space-x-2 hover-slide transition-colors hover:text-gray-600 dark:hover:text-gray-400">
+                    <i data-lucide="linkedin" class="w-4 h-4"></i>
+                    <span class="uppercase tracking-wider">LinkedIn</span>
+                </a>
+                <a href="mailto:emilioneme22@gmail.com" 
+                   class="group flex items-center space-x-2 hover-slide transition-colors hover:text-gray-600 dark:hover:text-gray-400">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    <span class="uppercase tracking-wider">Email</span>
+                </a>
+            </nav>
+            <p class="mt-8 text-xs text-gray-400 dark:text-gray-600 uppercase tracking-widest">
+                Emilio Neme @ emilioneme22@gmail.com
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Dark Mode Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to light
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            html.classList.add('dark');
+        }
+        
+        // Toggle theme function
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            // Re-initialize icons to ensure they render correctly
+            lucide.createIcons();
+        });
+        
+        // Smooth scroll for navigation
+        document.querySelector('a[href="#projects"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Project expand/collapse functionality
+        function toggleProject(card) {
+            const details = card.querySelector('.project-details');
+            const icon = card.querySelector('.project-icon');
+            
+            // Close all other projects first (accordion style)
+            document.querySelectorAll('.project-card').forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.querySelector('.project-details').classList.add('hidden');
+                    otherCard.querySelector('.project-icon').style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current project
+            if (details.classList.contains('hidden')) {
+                details.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                details.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+            
+            // Re-initialize icons in case new ones appeared
+            lucide.createIcons();
+        }
+        
+        // Respect system preference if no localStorage
+        if (!localStorage.getItem('theme')) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                html.classList.add('dark');
+            }
+        }
+        
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!localStorage.getItem('theme')) {
+                if (e.matches) {
+                    html.classList.add('dark');
+                } else {
+                    html.classList.remove('dark');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
