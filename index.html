@@ -423,7 +423,7 @@
                                             <img src="images/Panoipticon/sportlight.png"        alt="tower"        class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
                                         </div>
                                     </div>
-                            </div>
+                                </div>
                             </div>
                         </div>
                         <!-- Links (persistent footer) -->
@@ -817,10 +817,12 @@
                                         BLIND
                                     </h1>
                                     <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                        Cave
+                                        Listen      Touch      Explore
                                     </p>
                                     <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
                                         <span>C#</span>
+                                        <span>Unity</span>
+                                        <span>Shaders</span>
                                     </div>
                                     <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
                                         <span class="mr-2">View Details</span>
@@ -832,21 +834,112 @@
                         <!-- Expanded Content -->
                         <div class="project-details border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
                             <div class="p-6 space-y-6">
-                                <div class="prose prose-sm max-w-none">
-                                    <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
-                                        Tetris AI
-                                    </h2>
-                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
-                                        Heuristic-based AI for Tetris.
-                                    </p>
-                                </div>
-                                <!--iframe 
-                                        src="https://www.youtube.com/embed/OQO6xi2V6go?si=ajK21A5lhagIR5cE" 
+                                <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
+                                        SHORT MEDITATIVE GAME
+                                </h2>
+                                <iframe 
+                                        src="https://www.youtube.com/embed/2KKWH2S9W90?si=maq0LIYbQpGexGtS" 
                                         class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
                                         frameborder="0" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                         allowfullscreen>
-                                </iframe-->
+                                </iframe>
+                                <div class="prose prose-sm max-w-none">
+                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                        Blind is a short meditative game, meant to be played with headphones. There is no winning, or loosing, rather the goal of the game is simply to listen and explore. Around the cave, there are multiple items you can find, which have distinct sounds. You could try to find them all, or just find the ones you like the most. The game was made in a week and was made fore the sole purpose of creating a meditatice expireince. 
+                                    </p>
+                                </div>
+                                <!-- Images -->
+                                <div class="prose prose-sm max-w-none">
+                                    <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="toggleSection(this, 'images-toggle')">
+                                        <h3 class="text-lg font-semibold uppercase tracking-wider"></h3>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 panopticon-icon"></i>
+                                    </div>
+                                    <div class="images-toggle py-4">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <img src="images/Blind/cave2.png"     alt="eye"      class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                            <img src="images/Blind/water.png"       alt="inmates"    class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                            <img src="images/Blind/titleScreen.png"            alt="tower"        class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                            <img src="images/Blind/cave3.png"        alt="tower"        class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- More Details -->
+                                <div class="prose prose-sm max-w-none">
+                                    <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="toggleSection(this, 'section-toggle-more-detail')">
+                                        <h3 class="text-lg font-semibold uppercase tracking-wider">More Details</h3>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 engines-icon"></i>
+                                    </div>
+                                    <div class="section-toggle-more-detail hidden py-4">
+                                        <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <div class="text-center">
+                                                    <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
+                                                        Inspiration
+                                                </h2>
+                                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                                        In the world of Avatar the Last Airbender, Toph Beifong is and a blind Earthbender introduced in season 2 of the series. Earthbending, and any type of “Bending” is this world’s “Magic”. Characters are able to manipulate and the elements to their will at proximity. Born blind, Toph was overly mothered by her parents which pushed her away to them into discovering earthbending on her own. Being taught by blind animals, she eventually learned to “see” as long as she has ground.
+                                                    </p>
+                                                </div>
+                                                <iframe 
+                                                    src="https://www.youtube.com/embed/CDcWMvaxqj0?si=KTpPL0pJgeEQOn8n" 
+                                                    class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
+                                                    frameborder="0" 
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                    allowfullscreen>
+                                                </iframe>    
+                                            </div>
+                                           <img src="images/Blind/decider.png"  class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                           
+                                           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <img src="images/Blind/cave3.png"  class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                                <div class="text-center">
+                                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                                        The first thing I did was test out how it would be to be a fish, in a coral reef. Snooping and swimming around, blind, trying to find food and run away from pay. First thing I did was the shader, which is an intersection shader I used for another game, and it worked perfectly with this game. Next I did the swimming. I then realized that the effect was satisfying to look at, specially in organic geometry, and enclosed geometry like a cave.
+                                                    </p>
+                                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                                         I realized: The game does not need, enemies, external pressure or anything. Looking at this effect, listening to sounds, and moving around was enough. It felt like ZEN.
+                                                    </p>
+                                                </div> 
+                                            </div>
+                                            <img src="images/Blind/decider.png"  class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                           
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <div class="text-center">
+                                                    <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
+                                                        Daniel + Toph
+                                                </h2>
+                                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                                        Like DANIEL, there are many people who actively use Echolocation to navigate around the world. So even if TOPH used “magic” she could be real… why not make a game about her?
+                                                    </p>
+                                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                                        What if I make about a girl “lost” exploring a cave. Instead of being scared of the sounds, (an average child would be scared of), she is intrigued and attracted to them. But like TOPH’s parents, her parents are worried looking for her. Will she come out of the cave as soon as she hears them… or will she keep exploring until she gets bored?
+                                                    </p>
+                                                </div>
+                                                <iframe 
+                                                    src="https://www.youtube.com/embed/lAtVOK04XvA?si=L1weBykCFqFhYbA3" 
+                                                    class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
+                                                    frameborder="0" 
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                    allowfullscreen>
+                                                </iframe>    
+                                            </div>
+                                            <img src="images/Blind/decider.png"  class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <p class="text-center text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                                        In the future I would like to explore the idea of sound in video games. In this case it made for a satusfying expirience, but I would like to explore the idea of sound as a game mechanic more deeply. Maybe even as an accesibility feuture. SO i really enjoyed the video following video.
+                                                </p>
+                                                <iframe 
+                                                        src="https://www.youtube.com/embed/u6EuAUjq92k?si=PnR2rXvkGy9C6Xif" 
+                                                        class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
+                                                        frameborder="0" 
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                        allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- Links (persistent footer) -->
