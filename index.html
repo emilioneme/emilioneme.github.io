@@ -95,7 +95,7 @@
             background: #414141;
         }
 
-        .project-card { position: relative; z-index: 10; }
+        .project-card { position: relative; z-index: 30; }
 
         .project-details { position: relative; z-index: 30; }
         
@@ -1674,7 +1674,7 @@
         function frame(now) {
             const dt = (now - last) / 1000;
             last = now;
-            currentSize = currentSize * 0.999; // slowly shrink over time
+            //currentSize = currentSize * 0.999; // slowly shrink over time
             clampAndBounce(dt);
             el.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
             el.style.width = currentSize + 'px';
