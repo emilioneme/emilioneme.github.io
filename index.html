@@ -122,12 +122,16 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-sm font-semibold uppercase tracking-wider hover-slide">Emilio Neme</a>
             <div class="flex items-center space-x-6">
-                <a href="#best-work" class="text-sm uppercase tracking-wider hover-slide flex items-center space-x-1">
+                <a href="#spotlight" class="text-sm uppercase tracking-wider hover-slide flex items-center space-x-1">
                     <span>Spotlight</span>
                     <i data-lucide="arrow-down" class="w-3 h-3"></i>
                 </a>
                 <a href="#projects" class="text-sm uppercase tracking-wider hover-slide flex items-center space-x-1">
                     <span>Projects</span>
+                    <i data-lucide="arrow-down" class="w-3 h-3"></i>
+                </a>
+                <a href="#latest" class="text-sm uppercase tracking-wider hover-slide flex items-center space-x-1">
+                    <span>Latest</span>
                     <i data-lucide="arrow-down" class="w-3 h-3"></i>
                 </a>
                 <button id="theme-toggle" class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors" aria-label="Toggle dark mode">
@@ -202,7 +206,7 @@
     </section>
 
     <!-- Spotlight Section --> 
-    <section id="best-work" class="z-0 bg-gray-50 dark:bg-neutral-900 py-20 px-6 border-t border-black/5 dark:border-white/5">
+    <section id="spotlight" class="bg-gray-50 dark:bg-neutral-900 py-5 px-6 border-t border-black/5 dark:border-white/5">
         <div class="max-w-7xl mx-auto"> <!-- SIZE -->
             <div class="mb-12 text-center">
                 <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
@@ -353,8 +357,140 @@
         </div>
     </section>
 
+    <!-- Latest Section --> 
+    <section id="latest" class="bg-gray-50 dark:bg-neutral-900 py-5 px-6 border-t border-black/0 dark:border-white/0">
+        <div class="max-w-7xl mx-auto"> <!-- SIZE -->
+            <div class="mb-12 text-center">
+                <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                    Latest
+                </h1>
+                <div class="h-px w-12 bg-black dark:bg-white mx-auto"></div>
+            </div>
+            <div class="space-y-6">
+                
+                <!-- Megablyte -->
+                <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5">
+                    <!-- Tittle Cart -->
+                    <div class="p-0">
+                        <div class="flex flex-col md:flex-row cursor-pointer" style="max-height: 450px;" onclick="toggleProject(this.closest('.project-card'))">
+                            <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
+                                <img src="images/Megablyte/faceNoised.png" alt="Nearmiss" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
+                            </div>
+                            <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                                <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                                    Megablyte
+                                </h1>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                    Cumputer Collective
+                                </p>
+                                <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
+                                    <span>Game Developers</span>
+                                    <span>Creative Programmers</span>
+                                    <span>3D Modellers</span>
+                                    <span>Technical Artists</span>
+                                </div>
+                                <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
+                                    <span class="mr-2">View Details</span>
+                                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 project-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Expanded Content -->
+                    <div class="project-details border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
+                        <div class="p-6 space-y-6">
+                            <div class="prose prose-sm max-w-none">
+                                <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
+                                    Creative Programmers amongs other Digital Creatives
+                                </h2>
+                                <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                    Like an art Collective, we aim to create a group of creatives in the digital space. Opening a space for collaboration, learning, and sharing of knowledge. We want to create a community where people can come together to create and share their work, and to learn from each other.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Links (persistent footer) -->
+                    <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
+                        <a href="#"  class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                            <span>Wesbite On the Making</span>
+                        </a>
+                        <!--a href="https://github.com" target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            <span>Source Code</span>
+                        </a-->
+                    </div>
+                </div>
+
+                <!-- NEarmiss -->
+                <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5">
+                    <!-- Tittle Cart -->
+                    <div class="p-0">
+                        <div class="flex flex-col md:flex-row cursor-pointer" style="max-height: 450px;" onclick="toggleProject(this.closest('.project-card'))">
+                            <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
+                                <img src="images/Nearmiss/OldNEarmissMenu.png" alt="Nearmiss" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
+                            </div>
+                            <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                                <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                                    Nearmiss
+                                </h1>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                    Live on edge, by flying a paper airplane into buildings without crashing.
+                                </p>
+                                <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
+                                    <span>Unity</span>
+                                    <span>C#</span>
+                                    <span>2026</span>
+                                    <span>Git</span>
+                                </div>
+                                <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
+                                    <span class="mr-2">View Details</span>
+                                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 project-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Expanded Content -->
+                    <div class="project-details border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
+                        <div class="p-6 space-y-6">
+                            <div class="prose prose-sm max-w-none">
+                                <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
+                                    In development
+                                </h2>
+                                <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                    As a testament to those good old days when people gathered around a couch to play a single game where players battle against each other.
+                                    
+                                    In short: each player gets to decide their own playstyle; they each get to choose what wepaon they weild, what engine they wear, and what gadget they use.
+                                </p>
+                            </div>
+                            <iframe 
+                                    src="https://www.youtube.com/embed/sjGY8foaPes?si=3DC2F7RwvAa9xWh7" 
+                                    class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <!-- Links (persistent footer) -->
+                    <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
+                        <a href="https://eneme22.itch.io/nearmiss" target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                            <span>Find on Itch.io</span>
+                        </a>
+                        <a href="https://github.com/emilioneme/Nearmiss" target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            <span>Source Code</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
-    <section id="projects" class=" bg-gray-50 dark:bg-neutral-900 py-20 px-6 border-t border-black/5 dark:border-white/5">
+    <section id="projects" class=" bg-gray-50 dark:bg-neutral-900 py-5 px-6 border-t border-black/0 dark:border-white/0">
         <div class="max-w-7xl mx-auto">
             <div class="mb-12 text-center">
                 <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
@@ -1117,12 +1253,12 @@
                         <!-- Links (persistent footer) -->
                         <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
                             <a href="https://eneme22.itch.io/teocallilelemental" target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
-                                <i data-lucide="gamepad-2" class="w-4 h-4"></i>
-                                <span>Play on Itch.io</span>
+                                <i data-lucide="link" class="w-4 h-4"></i>
+                                <span>Wesbite on the Making</span>
                             </a>
-                            <a href="https://github.com/emilioneme/Elemental" target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                            <a href="https://github.com" target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
                                 <i data-lucide="github" class="w-4 h-4"></i>
-                                <span>Source Code</span>
+                                <span>Git On the Making</span>
                             </a>
                         </div>
                     </div>
