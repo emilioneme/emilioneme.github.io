@@ -1624,7 +1624,7 @@
     <script> //Floater --------------------------
         (function(){
         const speed = 180; // px/sec, tweak to change speed
-        const size = 96; // must match CSS width/height
+        let currentSize = 96; // must match CSS width/height
         // create element
         const el = document.createElement('div');
         el.className = 'floater';
@@ -1632,8 +1632,8 @@
         document.body.appendChild(el);
 
         // state
-        let x = Math.random() * (window.innerWidth - size);
-        let y = Math.random() * (window.innerHeight - size);
+        let x = Math.random() * (window.innerWidth - currentSize);
+        let y = Math.random() * (window.innerHeight - currentSize);
         let angle = Math.random() * Math.PI * 2;
         let vx = Math.cos(angle) * speed;
         let vy = Math.sin(angle) * speed;
@@ -1665,25 +1665,32 @@
             y += vy * dt;
 
             if (x <= 0) { x = 0; vx = Math.abs(vx); }
-            if (x >= w - size) { x = w - size; vx = -Math.abs(vx); }
+            if (x >= w - currentSize) { x = w - currentSize; vx = -Math.abs(vx); }
             if (y <= 0) { y = 0; vy = Math.abs(vy); }
-            if (y >= h - size) { y = h - size; vy = -Math.abs(vy); }
+            if (y >= h - currentSize) { y = h - currentSize; vy = -Math.abs(vy); }
         }
 
         let last = performance.now();
         function frame(now) {
             const dt = (now - last) / 1000;
             last = now;
+            currentSize = currentSize * 0.999; // slowly shrink over time
             clampAndBounce(dt);
             el.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
+            el.style.width = currentSize + 'px';
+            el.style.height = currentSize + 'px';
             requestAnimationFrame(frame);
+            if(currentSize < 20) {
+                kill();
+                return;
+            }
         }
         requestAnimationFrame(frame);
 
         // reposition if window resizes
         window.addEventListener('resize', () => {
-            x = Math.min(x, window.innerWidth - size);
-            y = Math.min(y, window.innerHeight - size);
+            x = Math.min(x, window.innerWidth - currentSize);
+            y = Math.min(y, window.innerHeight - currentSize);
         });
         })();
     </script>
