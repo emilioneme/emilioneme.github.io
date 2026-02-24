@@ -256,7 +256,7 @@
                                 <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                                 Even though there is two types of weapons: ranged and melee, each wepaon has their own unique mechanics, and they all feel different to use. Some are serve as counters for others, but they all have their own strengths and weaknesses.
                                 </p>
-                                <div class="section-toggle-weapons hidden py-4">
+                                <div class="section-toggle-weapons py-4">
                                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                         <img src="images/Evolve/disc.png"       alt="disc"          class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
                                         <img src="images/Evolve/fireWork.png"   alt="firework"      class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
@@ -275,7 +275,7 @@
                                 <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                                     Engines will determine how the player moves around the map. Either, taking advantage of the verticality of the map or just simply getting around faster.
                                 </p>
-                                <div class="section-toggle-engines hidden py-4">
+                                <div class="section-toggle-engines py-4">
                                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                         <img src="images/Evolve/pogo.png"        alt="grapplle"      class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
                                         <img src="images/Evolve/jetpack.png"     alt="trampoline"    class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
@@ -291,7 +291,7 @@
                                 <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                                     Gadgets are items that provide utility to the player, either in compbat or in movement. Providing addiional ways of getting around the map. They provide the player the space control that the engines dont provide themselves.
                                 </p>
-                                <div class="section-toggle-gadgets hidden py-4">
+                                <div class="section-toggle-gadgets py-4">
                                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                         <img src="images/Evolve/grapple.png"        alt="grapplle"      class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
                                         <img src="images/Evolve/port.png"           alt="portal"        class="w-full h-28 object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
@@ -299,9 +299,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Gadgeds -->
+                            <!-- Ebibitins -->
                             <div class="prose prose-sm max-w-none">
-                                <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="this.closest('.prose').querySelector('.section-toggle-gadgets').classList.toggle('hidden'); this.querySelector('.gadgets-icon').style.transform = this.closest('.prose').querySelector('.section-toggle-gadgets').classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';">
+                                <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="this.closest('.prose').querySelector('.exhibit-toggle').classList.toggle('hidden'); this.querySelector('.gadgets-icon').style.transform = this.closest('.prose').querySelector('.exhibit-toggle').classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';">
                                     <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
                                     Exibiting the Project
                                 </h2>
@@ -310,7 +310,7 @@
                                 <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                                     I had the opportunity to exhibit Evolve.exe at Goldsmiths University's Computing Degree Show 2024, where I got to see people playing the game and having fun with it. It was a great experience to see how people interacted with the game and how they enjoyed it.
                                 </p>
-                                <div class="section-toggle-gadgets hidden py-4">
+                                <div class="exhibit-toggle py-4">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <img src="images/Evolve/degreeSHow.jpg"        alt="degreeshow"      class="w-full h-full object-cover border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
                                         <iframe 
@@ -411,11 +411,11 @@
                                 </div>
                                 <!-- Images -->
                                 <div class="prose prose-sm max-w-none">
-                                    <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="toggleSection(this, 'panopticon-images')">
+                                    <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="toggleSection(this, 'toggle-images')">
                                         <h3 class="text-lg font-semibold uppercase tracking-wider"></h3>
                                         <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 panopticon-icon"></i>
                                     </div>
-                                    <div class="panopticon-images py-4">
+                                    <div class="toggle-images py-4">
                                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                             <img src="images/Panoipticon/spotligghtEye.png"     alt="eye"      class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
                                             <img src="images/Panoipticon/inmatedDark.png"       alt="inmates"    class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
@@ -457,7 +457,8 @@
                                     <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
                                         <span>Unity</span>
                                         <span>C#</span>
-                                        <span>Brackeys Jam 2026</span>
+                                        <span>Git</span>
+                                        <span>Brackeys-Jam-2026</span>
                                     </div>
                                     <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
                                         <span class="mr-2">View Details</span>
@@ -532,7 +533,8 @@
                                     <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
                                         <span>Unity</span>
                                         <span>C#</span>
-                                        <span>Jackcepticeye Game Jam</span>
+                                        <span>Git</span>
+                                        <span>Jackcepticeye-Game-Jam</span>
                                     </div>
                                     <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
                                         <span class="mr-2">View Details</span>
@@ -592,7 +594,8 @@
                                     <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
                                         <span>Unity</span>
                                         <span>C#</span>
-                                        <span>Global Game Jam 2025</span>
+                                        <span>Git</span>
+                                        <span>Global-Game-Jam-2025</span>
                                     </div>
                                     <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
                                         <span class="mr-2 ">View Details</span>
@@ -662,6 +665,8 @@
                                         <span>Python</span>
                                         <span>Meadia Pipe</span>
                                         <span>C#</span>
+                                        <span>Maya</span>
+                                        <span>HDRP</span>
                                     </div>
                                     <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
                                         <span class="mr-2">View Details</span>
@@ -740,6 +745,8 @@
                                     <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
                                         <span>C#</span>
                                         <span>Unity</span>
+                                        <span>Heuristics</span>
+                                        <span>Games AI</span>
                                     </div>
                                     <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
                                         <span class="mr-2">View Details</span>
@@ -954,25 +961,26 @@
                             </a>
                         </div>
                     </div>
-
-                    <!-- Teocalli ----------------------------------------------------------------------------------------------- -->
-                    <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5 self-start"> 
+                    
+                    <!-- Vacuum Voyagers ----------------------------------------------------------------------------------------------- -->
+                    <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5 self-start">
                         <!-- Tittle Cart -->
                         <div class="p-0">
                             <div class="flex flex-col md:flex-row cursor-pointer" style="max-height: 450px;" onclick="toggleProject(this.closest('.project-card'))">
                                 <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
-                                    <img src="images/Teocalli/teocalli.png" alt="Teocalli Cave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
+                                    <img src="images/VacuumVoyagers/vacuumVOyagers.png" alt="Teocalli Cave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
                                 </div>
                                 <div class="p-6 md:w-2/3 flex flex-col justify-center">
                                     <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
-                                        Teocalli
+                                        Vacuum Voyagers
                                     </h1>
                                     <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                        Cave
+                                        The Most Important Crewmate
                                     </p>
                                     <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
                                         <span>C#</span>
                                         <span>Unity</span>
+                                        <span>Git</span>
                                     </div>
                                     <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
                                         <span class="mr-2">View Details</span>
@@ -986,28 +994,122 @@
                             <div class="p-6 space-y-6">
                                 <div class="prose prose-sm max-w-none">
                                     <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
-                                        Teocalli
+                                        Space Janitor Simulator
                                     </h2>
                                     <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
-                                        Teocalli
+                                        Vacuum Voyagers is a space janitor simulator, where you play as a vacuum cleaner, cleaning up the mess on the outside of the spaceship just by the nature of flying in space. You must balance bwteen keeping charged, and cleaning. But if you pay close attention, you will find that there is more to the game than just cleaning. There are secrets to be found, and a story to be uncovered. You just need to pay close attention to the details.
                                     </p>
                                 </div>
-                                <!--iframe 
-                                        src="https://www.youtube.com/embed/OQO6xi2V6go?si=ajK21A5lhagIR5cE" 
+                                <iframe 
+                                        src="https://www.youtube.com/embed/M2PqR7vXlCM?si=5auCNSc-fRz_osXw" 
                                         class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
                                         frameborder="0" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                         allowfullscreen>
-                                </iframe-->
+                                </iframe>
+                                <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                    This is the first game I made in collaboration with friends. We learned to leverage Git, in order to work together on the same project.
+                                </p>
+                                <!-- Images -->
+                                <div class="prose prose-sm max-w-none">
+                                    <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="toggleSection(this, 'toggle-images')">
+                                        <h3 class="text-lg font-semibold uppercase tracking-wider"></h3>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 panopticon-icon"></i>
+                                    </div>
+                                    <div class="toggle-images py-4">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <img src="images/VacuumVoyagers/_Nx4m3.png"     alt="eye"      class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                            <img src="images/VacuumVoyagers/lsIou3.png"       alt="inmates"    class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- Links (persistent footer) -->
                         <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
-                            <a href="https://eneme22.itch.io/panopticon" target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                            <a href="https://eneme22.itch.io/vacuum-voyager" target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
                                 <i data-lucide="gamepad-2" class="w-4 h-4"></i>
                                 <span>Play on Itch.io</span>
                             </a>
-                            <a href="https://github.com/emilioneme/GJ26" target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                            <a href="https://github.com/emilioneme/VacuumVoyager"  target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <span>Source Code</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Teocalli ----------------------------------------------------------------------------------------------- -->
+                    <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5 self-start"> 
+                        <!-- Tittle Cart -->
+                        <div class="p-0">
+                            <div class="flex flex-col md:flex-row cursor-pointer" style="max-height: 450px;" onclick="toggleProject(this.closest('.project-card'))">
+                                <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
+                                    <img src="images/Teocalli/Logo.png" alt="Teocalli Cave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
+                                </div>
+                                <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                                    <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                                        Teocalli
+                                    </h1>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                        FIRE WATER AIR EARTH
+                                    </p>
+                                    <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
+                                        <span>C#</span>
+                                        <span>Unity</span>
+                                        <span>Magica Voxel</span>
+                                    </div>
+                                    <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
+                                        <span class="mr-2">View Details</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 project-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Expanded Content -->
+                        <div class="project-details border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
+                            <div class="p-6 space-y-6">
+                                <div class="prose prose-sm max-w-none">
+                                    <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
+                                        First Person Shooter with Elemental abilities!
+                                    </h2>
+                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                        THe objective of the game is to leverage the elemental knowldge to defeat your openets. The enemies spawn in waves, each representinf an element. After surviving enough waves, you will face the ELEMENTAL GODS. Defeat them to gain elemental knowledge.
+                                    </p>
+                                </div>
+                                <iframe 
+                                        src="https://www.youtube.com/embed/C8NXzRG9LnE?si=l6bVM6UgZXClAl50" 
+                                        class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                </iframe>
+                                <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                    This is the second game I have ever made in Unity. Due to the lack of skills I had in 3D Modelling, I used the Magica Voxey to create the sylized look of the game.
+                                </p>
+                                 <!-- Images -->
+                                <div class="prose prose-sm max-w-none">
+                                    <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="toggleSection(this, 'toggle-images')">
+                                        <h3 class="text-lg font-semibold uppercase tracking-wider"></h3>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 panopticon-icon"></i>
+                                    </div>
+                                    <div class="toggle-images py-4">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <img src="images/Teocalli/titlescreen.png"     alt="eye"      class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                            <img src="images/Teocalli/air.png"       alt="inmates"    class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                            <img src="images/Teocalli/watere.png"            alt="tower"        class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                            <img src="images/Teocalli/fire.png"        alt="tower"        class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Links (persistent footer) -->
+                        <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
+                            <a href="https://eneme22.itch.io/teocallilelemental" target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                                <i data-lucide="gamepad-2" class="w-4 h-4"></i>
+                                <span>Play on Itch.io</span>
+                            </a>
+                            <a href="https://github.com/emilioneme/Elemental" target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
                                 <i data-lucide="github" class="w-4 h-4"></i>
                                 <span>Source Code</span>
                             </a>
@@ -1027,7 +1129,7 @@
                                         ShroomMage
                                     </h1>
                                     <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                        ShroomMage
+                                        Protect the forest from contaminated blobs.
                                     </p>
                                     <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
                                         <span>C#</span>
@@ -1045,28 +1147,46 @@
                             <div class="p-6 space-y-6">
                                 <div class="prose prose-sm max-w-none">
                                     <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
-                                        ShroomMage
+                                        2D Base Defense Game
                                     </h2>
                                     <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
-                                        ShroomMage
+                                        Alhough a "Tower Defense" game, the player does not place towers, but rather controls a shroom mage that can move around the map and attack the enemies. The game is set in a forest, where the player has to protect the "heart of the forest" from contaminated blobs. As the shroomage, the player has the ability to pick up random spawning flowers that provide different elemental abilites to the player.
                                     </p>
                                 </div>
-                                <!--iframe 
-                                        src="https://www.youtube.com/embed/OQO6xi2V6go?si=ajK21A5lhagIR5cE" 
+                                <iframe 
+                                        src="https://www.youtube.com/embed/gx5DXSgvHCo?si=L5LZwF5538P7_twh" 
                                         class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
                                         frameborder="0" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                         allowfullscreen>
-                                </iframe-->
+                                </iframe>
+                                <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                            This is the first game I have ever made in Unity.
+                                </p>
+                                <!-- Images -->
+                                <div class="prose prose-sm max-w-none">
+                                    <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="toggleSection(this, 'toggle-images')">
+                                        <h3 class="text-lg font-semibold uppercase tracking-wider"></h3>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 panopticon-icon"></i>
+                                    </div>
+                                    <div class="toggle-images py-4">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <img src="images/ShroomMage/43sB3W.png"     alt="eye"      class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                            <img src="images/ShroomMage/boch9E.png"       alt="inmates"    class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                            <img src="images/ShroomMage/QlsLPl.png"            alt="tower"        class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                            <img src="images/ShroomMage/JanaRx.png"        alt="tower"        class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- Links (persistent footer) -->
                         <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
-                            <a href="https://eneme22.itch.io/panopticon" target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                            <a href="https://eneme22.itch.io/mageshroom" target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
                                 <i data-lucide="gamepad-2" class="w-4 h-4"></i>
                                 <span>Play on Itch.io</span>
                             </a>
-                            <a href="https://github.com/emilioneme/GJ26"  target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                            <a href="https://github.com/emilioneme/ShroomMage"  target="_blank" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
                                 <i data-lucide="github" class="w-4 h-4"></i>
                                 <span>Source Code</span>
                             </a>
