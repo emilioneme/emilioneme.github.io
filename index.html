@@ -93,17 +93,27 @@
         .dark ::-webkit-scrollbar-thumb:hover {
             background: #414141;
         }
-        .evolve-img {
-        width: 100%;
-        object-fit: cover;
-        border: 1px solid rgb(0 0 0 / 0.1);
-        filter: brightness(75%);
-        transition: all 0.3s;
+
+        .project-card { position: relative; z-index: 10; }
+
+        .project-details { position: relative; z-index: 30; }
+        
+        /* floating image */
+        .floater {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 96px;
+        height: 96px;
+        border-radius: 12px;
+        cursor: pointer;
+        z-index: 20; /* above section backgrounds but below project cards */
+        user-select: none;
+        pointer-events: auto;
+        will-change: transform;
         }
-        .evolve-img:hover {
-            filter: brightness(100%);
-            transform: scale(1.05);
-        }
+        .floater img { width:100%; height:100%; object-fit:cover; display:block; }
+        
     </style>
 </head>
 <body class="bg-white text-black dark:bg-black dark:text-white selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black antialiased">
@@ -130,14 +140,15 @@
 
     <!-- Hero Section -->
     <section class="min-h-screen flex flex-col items-center justify-center p-6 pt-20">
+        
         <main class="max-w-md w-full flex flex-col items-center text-center space-y-8 fade-in">
             <!-- Logo -->
-            <div class="w-[300px] h-[450px] fade-in opacity-0 bg-gray-100 dark:bg-gray-100 rounded-full flex items-center justify-center" style="animation-fill-mode: forwards;">
-                <img src="images/MiniMeIsoLeft.png" alt="Emilio Neme Logo" class="w-full h-full object-cover rounded-full border border-black/1 dark:border-white/20 contrast-125">
+            <div class="z-30 w-[300px] h-[450px] fade-in opacity-0 bg-gray-100 dark:bg-gray-100 rounded-full flex items-center justify-center" style="animation-fill-mode: forwards;">
+                <img src="images/MiniMe/MiniMeIsoLeft.png" alt="Emilio Neme Logo" class="w-full h-full object-cover rounded-full border border-black/1 dark:border-white/20 contrast-125">
             </div>
             
             <!-- Header Section -->
-            <div class="space-y-2 stagger-1 fade-in opacity-0" style="animation-fill-mode: forwards;">
+            <div class=" z-30 space-y-2 stagger-1 fade-in opacity-0" style="animation-fill-mode: forwards;">
                 <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
                     Emilio Neme
                 </h1>
@@ -190,8 +201,8 @@
         </main>
     </section>
 
-    <!-- Best Work Section -->
-    <section id="best-work" class=" bg-gray-50 dark:bg-neutral-900 py-20 px-6 border-t border-black/5 dark:border-white/5">
+    <!-- Spotlight Section --> 
+    <section id="best-work" class="z-0 bg-gray-50 dark:bg-neutral-900 py-20 px-6 border-t border-black/5 dark:border-white/5">
         <div class="max-w-7xl mx-auto"> <!-- SIZE -->
             <div class="mb-12 text-center">
                 <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
@@ -1316,5 +1327,74 @@
             }
         });
     </script>
+
+    <script> //Floater --------------------------
+        (function(){
+        const speed = 180; // px/sec, tweak to change speed
+        const size = 96; // must match CSS width/height
+        // create element
+        const el = document.createElement('div');
+        el.className = 'floater';
+        el.innerHTML = '<img src="images/MiniMe/MiniMeIsoLeft.png" alt="Emilio Neme Logo" class="w-full h-full object-cover rounded-full border border-black/1 dark:border-white/20 contrast-125">';
+        document.body.appendChild(el);
+
+        // state
+        let x = Math.random() * (window.innerWidth - size);
+        let y = Math.random() * (window.innerHeight - size);
+        let angle = Math.random() * Math.PI * 2;
+        let vx = Math.cos(angle) * speed;
+        let vy = Math.sin(angle) * speed;
+
+        function randomizeDirection() {
+            angle = Math.random() * Math.PI * 2;
+            vx = Math.cos(angle) * speed;
+            vy = Math.sin(angle) * speed;
+        }
+
+        function kill()
+        {
+            el.remove();
+        }
+
+        el.addEventListener('mouseover', (e) => {
+            e.stopPropagation();
+            randomizeDirection();
+        });
+
+        el.addEventListener('click', (e) => {
+            kill();
+        });
+
+        // keep inside viewport with bounce
+        function clampAndBounce(dt) {
+            const w = window.innerWidth, h = window.innerHeight;
+            x += vx * dt;
+            y += vy * dt;
+
+            if (x <= 0) { x = 0; vx = Math.abs(vx); }
+            if (x >= w - size) { x = w - size; vx = -Math.abs(vx); }
+            if (y <= 0) { y = 0; vy = Math.abs(vy); }
+            if (y >= h - size) { y = h - size; vy = -Math.abs(vy); }
+        }
+
+        let last = performance.now();
+        function frame(now) {
+            const dt = (now - last) / 1000;
+            last = now;
+            clampAndBounce(dt);
+            el.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
+            requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+
+        // reposition if window resizes
+        window.addEventListener('resize', () => {
+            x = Math.min(x, window.innerWidth - size);
+            y = Math.min(y, window.innerHeight - size);
+        });
+        })();
+    </script>
+
+
 </body>
 </html>
