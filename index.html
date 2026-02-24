@@ -109,7 +109,7 @@
 <body class="bg-white text-black dark:bg-black dark:text-white selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black antialiased">
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 bg-white/90 dark:bg-black/90 backdrop-blur-sm z-50 border-b border-black/10 dark:border-white/10">
-        <div class="max-w-10xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-sm font-semibold uppercase tracking-wider hover-slide">Emilio Neme</a>
             <div class="flex items-center space-x-6">
                 <a href="#best-work" class="text-sm uppercase tracking-wider hover-slide flex items-center space-x-1">
@@ -192,7 +192,7 @@
 
     <!-- Best Work Section -->
     <section id="best-work" class=" bg-gray-50 dark:bg-neutral-900 py-20 px-6 border-t border-black/5 dark:border-white/5">
-        <div class="max-w-10xl mx-auto">
+        <div class="max-w-7xl mx-auto"> <!-- SIZE -->
             <div class="mb-12 text-center">
                 <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
                     Spotlight
@@ -205,7 +205,7 @@
                 <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5">
                     <!-- Tittle Cart -->
                     <div class="p-0">
-                        <div class="flex flex-col md:flex-row cursor-pointer" onclick="toggleProject(this.closest('.project-card'))">
+                        <div class="flex flex-col md:flex-row cursor-pointer" style="max-height: 450px;" onclick="toggleProject(this.closest('.project-card'))">
                             <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
                                 <img src="images/Evolve/city.png" alt="Evolve.exe" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
                             </div>
@@ -329,7 +329,7 @@
                     <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
                         <a href="https://eneme22.itch.io/evolve" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
                             <i data-lucide="external-link" class="w-4 h-4"></i>
-                            <span>Play on Itch.io</span>
+                            <span>Find on Itch.io</span>
                         </a>
                         <a href="https://github.com/emilioneme/EVOLVE.exe" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
                             <i data-lucide="github" class="w-4 h-4"></i>
@@ -338,11 +338,232 @@
                     </div>
                 </div>
 
-                <!-- Asphyxiatus ----------------------------------------------------------------------------------------------- -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class=" bg-gray-50 dark:bg-neutral-900 py-20 px-6 border-t border-black/5 dark:border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12 text-center">
+                <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                  Projects
+                </h1>
+                <div class="h-px w-12 bg-black dark:bg-white mx-auto"></div>
+            </div>
+            <div class="space-y-6">
+                <!-- Girdded Projects -->
+                <div class="grid gap-4 overflow-auto" style="
+                            grid-template-columns: repeat(auto-fit, minmax(min(620px, 50%), 1fr));
+                            ">
+                            <!-- for scrolling max-height: 2000px -->
+
+                    <!-- Panopticon ----------------------------------------------------------------------------------------------- -->
                     <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5 self-start">
                         <!-- Tittle Cart -->
                         <div class="p-0">
-                            <div class="flex flex-col md:flex-row cursor-pointer" onclick="toggleProject(this.closest('.project-card'))">
+                            <div class="flex flex-col md:flex-row cursor-pointer" style="max-height: 450px;" onclick="toggleProject(this.closest('.project-card'))">
+                                <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
+                                    <img src="images/Panoipticon/panopticonTitle.gif" alt="Evolve.exe" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
+                                </div>
+                                <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                                    <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                                        Panopticon
+                                    </h1>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                        BLEND IN     BLEND IN      BLEND IN
+                                    </p>
+                                    <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
+                                        <span>Unity</span>
+                                        <span>C#</span>
+                                        <span>Global-Game-Jam-2026</span>
+                                    </div>
+                                    <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
+                                        <span class="mr-2 ">View Details</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 project-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Expanded Content -->
+                        <div class="project-details border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
+                            <div class="p-6 space-y-6">
+                                <div class="prose prose-sm max-w-none">
+                                    <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
+                                        First-Person Psychological Horror Game
+                                    </h2>
+                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                        A first-person horror game where the player is trapped in a mysterious facility and must find a way to escape while being survailed by the watchers.
+                                    </p>
+                                </div>
+                                <iframe 
+                                        src="https://www.youtube.com/embed/DRNCBPtbAMY?si=T5tcit3rV352bUdY" 
+                                        class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                <!-- Extra -->
+                                <div class="prose prose-sm max-w-none">
+                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                        Alongside my friends, we made a game for Global Game Jam 2026, in under 72 hours. A crazy expirience I will only repeat a maximum of once a year! 
+                                    </p>
+                                </div>
+                                <!-- Images -->
+                                <div class="prose prose-sm max-w-none">
+                                    <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="toggleSection(this, 'panopticon-images')">
+                                        <h3 class="text-lg font-semibold uppercase tracking-wider"></h3>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 panopticon-icon"></i>
+                                    </div>
+                                    <div class="panopticon-images py-4">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <img src="images/Panoipticon/spotligghtEye.png"       alt="eye"      class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                            <img src="images/Panoipticon/inmatedDark.png"       alt="inmates"    class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                            <img src="images/Panoipticon/32Q+_Z.png"       alt="tower"        class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                            <img src="images/Panoipticon/sportlight.png"       alt="tower"        class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- Links (persistent footer) -->
+                        <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
+                            <a href="https://eneme22.itch.io/panopticon" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                                <i data-lucide="gamepad-2" class="w-4 h-4"></i>
+                                <span>Play on Itch.io</span>
+                            </a>
+                            <a href="https://github.com/emilioneme/GJ26" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <span>Source Code</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Odd Job ----------------------------------------------------------------------------------------------- -->
+                    <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5 self-start">
+                        <!-- Tittle Cart -->
+                        <div class="p-0">
+                            <div class="flex flex-col md:flex-row cursor-pointer" style="max-height: 450px;" onclick="toggleProject(this.closest('.project-card'))">
+                                <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
+                                    <img src="images/OddJob/oddJob.gif" alt="Evolve.exe" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
+                                </div>
+                                <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                                    <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                                        Odd Job
+                                    </h1>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                        Totally Normal Job Simulator
+                                    </p>
+                                    <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
+                                        <span>Unity</span>
+                                        <span>C#</span>
+                                        <span>Brackeys Jam 2026</span>
+                                    </div>
+                                    <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
+                                        <span class="mr-2">View Details</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 project-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Expanded Content -->
+                        <div class="project-details border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
+                            <div class="p-6 space-y-6">
+                                <div class="prose prose-sm max-w-none">
+                                    <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
+                                        Job Simulator?
+                                    </h2>
+                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                        Off course not. This is was a submission for the Brackeys Game Jam themes: Weird Places. 
+                                    </p>
+                                </div>
+                                <!--iframe 
+                                        src="https://www.youtube.com/embed/OQO6xi2V6go?si=ajK21A5lhagIR5cE" 
+                                        class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                </iframe-->
+                            </div>
+                        </div>
+                        <!-- Links (persistent footer) -->
+                        <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
+                            <a href="https://orbxorb.itch.io/oddjob" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                                <i data-lucide="gamepad-2" class="w-4 h-4"></i>
+                                <span>Play on Itch.io</span>
+                            </a>
+                            <a href="https://github.com/shtoa/OddJob" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <span>Source Code</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Till Nghtfall ----------------------------------------------------------------------------------------------- -->
+                    <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5 self-start">
+                        <!-- Tittle Cart -->
+                        <div class="p-0">
+                            <div class="flex flex-col md:flex-row cursor-pointer" style="max-height: 450px;" onclick="toggleProject(this.closest('.project-card'))">
+                                <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
+                                    <img src="images/TillNightFall/tillNightfall.png" alt="Evolve.exe" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
+                                </div>
+                                <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                                    <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                                        Till Nightfall
+                                    </h1>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                        7:00 AM - No food.
+                                    </p>
+                                    <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
+                                        <span>Unity</span>
+                                        <span>C#</span>
+                                        <span>Jackcepticeye Game Jam</span>
+                                    </div>
+                                    <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
+                                        <span class="mr-2">View Details</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 project-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Expanded Content -->
+                        <div class="project-details border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
+                            <div class="p-6 space-y-6">
+                                <div class="prose prose-sm max-w-none">
+                                    <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
+                                        Till Nightfall
+                                    </h2>
+                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                        Survive the night 
+                                    </p>
+                                </div>
+                                <!--iframe 
+                                        src="https://www.youtube.com/embed/OQO6xi2V6go?si=ajK21A5lhagIR5cE" 
+                                        class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                </iframe-->
+                            </div>
+                        </div>
+                        <!-- Links (persistent footer) -->
+                        <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
+                            <a href="https://eneme22.itch.io/tillnightfall" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                                <i data-lucide="gamepad-2" class="w-4 h-4"></i>
+                                <span>Play on Itch.io</span>
+                            </a>
+                            <a href="https://github.com/Alastairrd/Unity20thAnniversaryGameJam-Timeless-2025" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <span>Source Code</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Asphyxiatus ----------------------------------------------------------------------------------------------- -->
+                    <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5 self-start">
+                        <!-- Tittle Cart -->
+                        <div class="p-0">
+                            <div class="flex flex-col md:flex-row cursor-pointer" style="max-height: 450px;" onclick="toggleProject(this.closest('.project-card'))">
                                 <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
                                     <img src="images/Asphyxiatus/asphyxiatus.gif" alt="Evolve.exe" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
                                 </div>
@@ -394,7 +615,7 @@
                         <!-- Links (persistent footer) -->
                         <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
                             <a href="https://eneme22.itch.io/panopticon" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
-                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                <i data-lucide="gamepad-2" class="w-4 h-4"></i>
                                 <span>Play on Itch.io</span>
                             </a>
                             <a href="https://github.com/emilioneme/GJ26" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
@@ -404,45 +625,28 @@
                         </div>
                     </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class=" bg-gray-50 dark:bg-neutral-900 py-20 px-6 border-t border-black/5 dark:border-white/5">
-        <div class="max-w-10xl mx-auto">
-            <div class="mb-12 text-center">
-                <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
-                  Projects
-                </h1>
-                <div class="h-px w-12 bg-black dark:bg-white mx-auto"></div>
-            </div>
-            <div class="space-y-6">
-                <!-- Girdded Projects -->
-                <div class="grid gap-4" style="grid-template-columns: repeat(auto-fit, minmax(min(600px, 50%), 1fr));">
-
-                    <!-- Panopticon ----------------------------------------------------------------------------------------------- -->
+                    <!-- Torii ----------------------------------------------------------------------------------------------- -->
                     <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5 self-start">
                         <!-- Tittle Cart -->
                         <div class="p-0">
-                            <div class="flex flex-col md:flex-row cursor-pointer" onclick="toggleProject(this.closest('.project-card'))">
+                            <div class="flex flex-col md:flex-row cursor-pointer" style="max-height: 450px;" onclick="toggleProject(this.closest('.project-card'))">
                                 <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
-                                    <img src="images/Panoipticon/panopticonTitle.gif" alt="Evolve.exe" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
+                                    <img src="images/Torii/hand.png" alt="Evolve.exe" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
                                 </div>
                                 <div class="p-6 md:w-2/3 flex flex-col justify-center">
                                     <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
-                                        Panopticon
+                                        Torii
                                     </h1>
                                     <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                        BLEND IN     BLEND IN      BLEND IN
+                                        Hand Tracking Game
                                     </p>
                                     <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
-                                        <span>Unity</span>
+                                        <span>Python</span>
+                                        <span>Meadia Pipe</span>
                                         <span>C#</span>
-                                        <span>Global Game Jam 2026</span>
                                     </div>
                                     <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
-                                        <span class="mr-2 ">View Details</span>
+                                        <span class="mr-2">View Details</span>
                                         <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 project-icon"></i>
                                     </div>
                                 </div>
@@ -453,156 +657,26 @@
                             <div class="p-6 space-y-6">
                                 <div class="prose prose-sm max-w-none">
                                     <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
-                                        First-Person Psychological Horror Game
+                                        Torii
                                     </h2>
                                     <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
-                                        A first-person horror game where the player is trapped in a mysterious facility and must find a way to escape while being survailed by the watchers.
+                                        Hand Tracking 
                                     </p>
                                 </div>
                                 <iframe 
-                                        src="https://www.youtube.com/embed/DRNCBPtbAMY?si=T5tcit3rV352bUdY" 
+                                        src="https://www.youtube.com/embed/6shLdfJsPtM?si=pbn6BwkwycmNvO2e" 
                                         class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
                                         frameborder="0" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                         allowfullscreen>
-                                    </iframe>
-                                <!-- Extra -->
-                                <div class="prose prose-sm max-w-none">
-                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
-                                        Alongside my friends, we made a game for Global Game Jam 2026, in under 72 hours. Although its one of many jams I have participated in, this not only was a Global Game Jam, but it is the first game jam I have stayed over on site. A crazy expirience I will only repeat a maximum of once a year! 
-                                    </p>
-                                </div>
+                                </iframe>
                             </div>
                         </div>
                         <!-- Links (persistent footer) -->
                         <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
-                            <a href="https://eneme22.itch.io/panopticon" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
-                                <i data-lucide="external-link" class="w-4 h-4"></i>
-                                <span>Play on Itch.io</span>
-                            </a>
-                            <a href="https://github.com/emilioneme/GJ26" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                            <a href="https://github.com/emilioneme/DMLCP" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
                                 <i data-lucide="github" class="w-4 h-4"></i>
-                                <span>Source Code</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Odd Job ----------------------------------------------------------------------------------------------- -->
-                    <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5 self-start">
-                        <!-- Tittle Cart -->
-                        <div class="p-0">
-                            <div class="flex flex-col md:flex-row cursor-pointer" onclick="toggleProject(this.closest('.project-card'))">
-                                <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
-                                    <img src="images/OddJob/oddJob.gif" alt="Evolve.exe" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
-                                </div>
-                                <div class="p-6 md:w-2/3 flex flex-col justify-center">
-                                    <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
-                                        Odd Job
-                                    </h1>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                        Totally Normal Job Simulator
-                                    </p>
-                                    <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
-                                        <span>Unity</span>
-                                        <span>C#</span>
-                                        <span>Brackeys Jam 2026</span>
-                                    </div>
-                                    <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
-                                        <span class="mr-2">View Details</span>
-                                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 project-icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Expanded Content -->
-                        <div class="project-details border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
-                            <div class="p-6 space-y-6">
-                                <div class="prose prose-sm max-w-none">
-                                    <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
-                                        Job Simulator?
-                                    </h2>
-                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
-                                        Off course not. This is was a submission for the Brackeys Game Jam themes: Weird Places. 
-                                    </p>
-                                </div>
-                                <!--iframe 
-                                        src="https://www.youtube.com/embed/OQO6xi2V6go?si=ajK21A5lhagIR5cE" 
-                                        class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                        allowfullscreen>
-                                </iframe-->
-                            </div>
-                        </div>
-                        <!-- Links (persistent footer) -->
-                        <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
-                            <a href="https://orbxorb.itch.io/oddjob" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
-                                <i data-lucide="external-link" class="w-4 h-4"></i>
-                                <span>Play on Itch.io</span>
-                            </a>
-                            <a href="https://github.com/shtoa/OddJob" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
-                                <i data-lucide="github" class="w-4 h-4"></i>
-                                <span>Source Code</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Till Nghtfall ----------------------------------------------------------------------------------------------- -->
-                    <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5 self-start">
-                        <!-- Tittle Cart -->
-                        <div class="p-0">
-                            <div class="flex flex-col md:flex-row cursor-pointer" onclick="toggleProject(this.closest('.project-card'))">
-                                <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
-                                    <img src="images/TillNightFall/tillNightfall.png" alt="Evolve.exe" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
-                                </div>
-                                <div class="p-6 md:w-2/3 flex flex-col justify-center">
-                                    <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
-                                        Till Nightfall
-                                    </h1>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                                        7:00 AM - No food.
-                                    </p>
-                                    <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
-                                        <span>Unity</span>
-                                        <span>C#</span>
-                                        <span>Jackcepticeye Game Jam</span>
-                                    </div>
-                                    <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
-                                        <span class="mr-2">View Details</span>
-                                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 project-icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Expanded Content -->
-                        <div class="project-details border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
-                            <div class="p-6 space-y-6">
-                                <div class="prose prose-sm max-w-none">
-                                    <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
-                                        Till Nightfall
-                                    </h2>
-                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
-                                        Survive the night 
-                                    </p>
-                                </div>
-                                <!--iframe 
-                                        src="https://www.youtube.com/embed/OQO6xi2V6go?si=ajK21A5lhagIR5cE" 
-                                        class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                        allowfullscreen>
-                                </iframe-->
-                            </div>
-                        </div>
-                        <!-- Links (persistent footer) -->
-                        <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
-                            <a href="https://eneme22.itch.io/tillnightfall" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
-                                <i data-lucide="external-link" class="w-4 h-4"></i>
-                                <span>Play on Itch.io</span>
-                            </a>
-                            <a href="https://github.com/Alastairrd/Unity20thAnniversaryGameJam-Timeless-2025" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
-                                <i data-lucide="github" class="w-4 h-4"></i>
-                                <span>Source Code</span>
+                                <span>Course Source Code</span>
                             </a>
                         </div>
                     </div>
@@ -611,7 +685,7 @@
                     <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5 self-start">
                         <!-- Tittle Cart -->
                         <div class="p-0">
-                            <div class="flex flex-col md:flex-row cursor-pointer" onclick="toggleProject(this.closest('.project-card'))">
+                            <div class="flex flex-col md:flex-row cursor-pointer" style="max-height: 450px;" onclick="toggleProject(this.closest('.project-card'))">
                                 <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
                                     <img src="images/TetrusAI/tetrisGame.gif" alt="Evolve.exe" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
                                 </div>
@@ -656,7 +730,7 @@
                         <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
                             <a href="https://www.alanzucconi.com/courses/game-ai/" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
                                 <i data-lucide="external-link" class="w-4 h-4"></i>
-                                <span>Course</span>
+                                <span>Find Course on alanzucconi.com</span>
                             </a>
                         </div>
                     </div>
@@ -665,7 +739,7 @@
                     <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5 self-start">
                         <!-- Tittle Cart -->
                         <div class="p-0">
-                            <div class="flex flex-col md:flex-row cursor-pointer" onclick="toggleProject(this.closest('.project-card'))">
+                            <div class="flex flex-col md:flex-row cursor-pointer" style="max-height: 450px;" onclick="toggleProject(this.closest('.project-card'))">
                                 <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
                                     <img src="images/Blind/blindCave.png" alt="Evolve.exe" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
                                 </div>
@@ -708,9 +782,131 @@
                         </div>
                         <!-- Links (persistent footer) -->
                         <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
-                            <a href="https://www.alanzucconi.com/courses/game-ai/" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                            <a href="https://eneme22.itch.io/BLIND" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
                                 <i data-lucide="external-link" class="w-4 h-4"></i>
-                                <span>Course</span>
+                                <span>Find on Itch.io</span>
+                            </a>
+                            <a href="https://github.com/emilioneme/BLIND" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <span>Source Code</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Teocalli ----------------------------------------------------------------------------------------------- -->
+                    <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5 self-start"> 
+                        <!-- Tittle Cart -->
+                        <div class="p-0">
+                            <div class="flex flex-col md:flex-row cursor-pointer" style="max-height: 450px;" onclick="toggleProject(this.closest('.project-card'))">
+                                <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
+                                    <img src="images/Teocalli/teocalli.png" alt="Teocalli Cave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
+                                </div>
+                                <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                                    <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                                        Teocalli
+                                    </h1>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                        Cave
+                                    </p>
+                                    <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
+                                        <span>C#</span>
+                                        <span>Unity</span>
+                                    </div>
+                                    <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
+                                        <span class="mr-2">View Details</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 project-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Expanded Content -->
+                        <div class="project-details border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
+                            <div class="p-6 space-y-6">
+                                <div class="prose prose-sm max-w-none">
+                                    <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
+                                        Teocalli
+                                    </h2>
+                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                        Teocalli
+                                    </p>
+                                </div>
+                                <!--iframe 
+                                        src="https://www.youtube.com/embed/OQO6xi2V6go?si=ajK21A5lhagIR5cE" 
+                                        class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                </iframe-->
+                            </div>
+                        </div>
+                        <!-- Links (persistent footer) -->
+                        <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
+                            <a href="https://eneme22.itch.io/panopticon" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                                <i data-lucide="gamepad-2" class="w-4 h-4"></i>
+                                <span>Play on Itch.io</span>
+                            </a>
+                            <a href="https://github.com/emilioneme/GJ26" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <span>Source Code</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ShroomMage ----------------------------------------------------------------------------------------------- -->
+                    <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5 self-start">
+                        <!-- Tittle Cart -->
+                        <div class="p-0">
+                            <div class="flex flex-col md:flex-row cursor-pointer" style="max-height: 450px;" onclick="toggleProject(this.closest('.project-card'))">
+                                <div class="md:w-1/3 w-full aspect-video overflow-hidden bg-gray-100 dark:bg-neutral-800">
+                                    <img src="images/ShroomMage/ShrooMage.png" alt="Teocalli Cave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 hover:grayscale-100">
+                                </div>
+                                <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                                    <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                                        ShroomMage
+                                    </h1>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                                        ShroomMage
+                                    </p>
+                                    <div class="flex items-center text-xs uppercase tracking-wider text-gray-400 dark:text-gray-600 space-x-4">
+                                        <span>C#</span>
+                                        <span>Unity</span>
+                                    </div>
+                                    <div class="mt-4 flex items-center text-sm text-black dark:text-white font-medium">
+                                        <span class="mr-2">View Details</span>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 project-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Expanded Content -->
+                        <div class="project-details border-t border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-900/50 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
+                            <div class="p-6 space-y-6">
+                                <div class="prose prose-sm max-w-none">
+                                    <h2 class="text-2xl md:text-1xl font-semibold tracking-tight uppercase">
+                                        ShroomMage
+                                    </h2>
+                                    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 py-1">
+                                        ShroomMage
+                                    </p>
+                                </div>
+                                <!--iframe 
+                                        src="https://www.youtube.com/embed/OQO6xi2V6go?si=ajK21A5lhagIR5cE" 
+                                        class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                </iframe-->
+                            </div>
+                        </div>
+                        <!-- Links (persistent footer) -->
+                        <div class="flex space-x-4 pt-2 border-t border-black/5 dark:border-white/5 bg-gray-300 dark:bg-black px-4 py-3">
+                            <a href="https://eneme22.itch.io/panopticon" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                                <i data-lucide="gamepad-2" class="w-4 h-4"></i>
+                                <span>Play on Itch.io</span>
+                            </a>
+                            <a href="https://github.com/emilioneme/GJ26" class="inline-flex items-center space-x-2 text-sm uppercase tracking-wider hover-slide hover:text-gray-600 dark:hover:text-gray-400">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <span>Source Code</span>
                             </a>
                         </div>
                     </div>
