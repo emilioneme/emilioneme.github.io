@@ -437,6 +437,7 @@
                 <div class="h-px w-12 bg-black dark:bg-white mx-auto"></div>
             </div>
             <div class="space-y-6">
+
                 <!-- Megablyte -->
                 <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5">
                     <!-- Tittle Cart -->
@@ -648,6 +649,7 @@
                         </a>
                     </div>
                 </div>
+
                 <!-- Nearmiss -->
                 <div class="project-card bg-white dark:bg-black border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-white/5">
                     <!-- Tittle Cart -->
@@ -798,12 +800,17 @@
     <section id="projects" class=" bg-gray-50 dark:bg-neutral-900 py-5 px-6 border-t border-black/0 dark:border-white/0">
         <div class="max-w-7xl mx-auto">
             <div class="mb-12 text-center">
-                <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
-                  Projects
-                </h1>
-                <div class="h-px w-12 bg-black dark:bg-white mx-auto"></div>
+                <button id="projects-toggle-btn" class="w-full flex flex-col items-center cursor-pointer group transition-all" onclick="toggleProjectsSection()">
+                    <h1 class="text-2xl md:text-3xl font-semibold tracking-tight uppercase">
+                      Other Projects
+                    </h1>
+                    <div class="h-px w-12 bg-black dark:bg-white mx-auto group-hover:w-16 transition-all"></div>
+                    <div class="mt-2 flex items-center text-sm text-gray-600 dark:text-gray-400">
+                        <i id="projects-chevron" data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+                    </div>
+                </button>
             </div>
-            <div class="space-y-6">
+            <div id="projects-content" class="space-y-6 transition-all duration-500 ease-in-out overflow-hidden" style="max-height: 0px;">
                 <!-- Girdded Projects -->
                 <div class="grid gap-4 overflow-auto" style="
                             grid-template-columns: repeat(auto-fit, minmax(min(620px, 50%), 1fr));
@@ -1649,7 +1656,16 @@
                 else openPanel();
             });
 
-            sidePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', closePanel));
+            sidePanel.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => {
+                    closePanel();
+                    // Check if it's the projects link and expand if needed
+                    if (a.getAttribute('href') === '#projects') {
+                        // Delay to ensure panel closes smoothly first
+                        setTimeout(() => expandProjectsSection(), 300);
+                    }
+                });
+            });
 
             // Close panel when viewport becomes wider than mobile breakpoint
             const mq = window.matchMedia('(min-width: 721px)');
@@ -1661,8 +1677,38 @@
         // Smooth scroll for navigation
         document.querySelector('a[href="#projects"]').addEventListener('click', function(e) {
             e.preventDefault();
+            expandProjectsSection(); // Ensure it's expanded
             document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
         });
+        
+        // Toggle projects section
+        let projectsSectionExpanded = false; // Start collapsed
+        function toggleProjectsSection() {
+            const content = document.getElementById('projects-content');
+            const chevron = document.getElementById('projects-chevron');
+            
+            projectsSectionExpanded = !projectsSectionExpanded;
+            
+            if (projectsSectionExpanded) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                chevron.style.transform = 'rotate(180deg)';
+            } else {
+                content.style.maxHeight = '0px';
+                chevron.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+        // Expand projects section
+        function expandProjectsSection() {
+            const content = document.getElementById('projects-content');
+            const chevron = document.getElementById('projects-chevron');
+            
+            if (!projectsSectionExpanded) {
+                projectsSectionExpanded = true;
+                content.style.maxHeight = content.scrollHeight + 'px';
+                chevron.style.transform = 'rotate(0deg)';
+            }
+        }
         
         // Project expand/collapse functionality
         function toggleProject(card) {
