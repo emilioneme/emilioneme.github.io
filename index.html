@@ -1735,6 +1735,13 @@
         
         // Toggle projects section
         let projectsSectionExpanded = false; // Start collapsed
+        const projectsExtraHeight = 180;
+
+        function setProjectsContentHeight(contentEl) {
+            if (!contentEl) return;
+            contentEl.style.maxHeight = (contentEl.scrollHeight + projectsExtraHeight) + 'px';
+        }
+
         function toggleProjectsSection() {
             const content = document.getElementById('projects-content');
             const chevron = document.getElementById('projects-chevron');
@@ -1742,7 +1749,7 @@
             projectsSectionExpanded = !projectsSectionExpanded;
             
             if (projectsSectionExpanded) {
-                content.style.maxHeight = content.scrollHeight + 'px';
+                setProjectsContentHeight(content);
                 chevron.style.transform = 'rotate(180deg)';
             } else {
                 content.style.maxHeight = '0px';
@@ -1757,7 +1764,7 @@
             
             if (!projectsSectionExpanded) {
                 projectsSectionExpanded = true;
-                content.style.maxHeight = content.scrollHeight + 'px';
+                setProjectsContentHeight(content);
                 chevron.style.transform = 'rotate(0deg)';
             }
         }
@@ -1777,12 +1784,30 @@
                 }
             });//*/
                     
+            // Ensure the parent projects section is expanded when toggling a card inside it
+            const projectsSection = card.closest('#projects');
+            const projectsContent = projectsSection ? document.getElementById('projects-content') : null;
+            const projectsChevron = document.getElementById('projects-chevron');
+
+            if (projectsContent && (!projectsSectionExpanded || projectsContent.style.maxHeight === '0px')) {
+                projectsSectionExpanded = true;
+                setProjectsContentHeight(projectsContent);
+                if (projectsChevron) projectsChevron.style.transform = 'rotate(180deg)';
+            }
+
             if (!isOpen) {
                 details.style.maxHeight = details.scrollHeight + 'px';
-                icon.style.transform = 'rotate(180deg)';
+                if (icon) icon.style.transform = 'rotate(180deg)';
             } else {
                 details.style.maxHeight = '0px';
-                icon.style.transform = 'rotate(0deg)';
+                if (icon) icon.style.transform = 'rotate(0deg)';
+            }
+
+            // Recalculate the projects container height after the card transition finishes
+            if (projectsContent) {
+                setTimeout(() => {
+                    setProjectsContentHeight(projectsContent);
+                }, 350); // slightly longer than the card transition (300ms)
             }
         }
 
@@ -1798,6 +1823,15 @@
             const details = card.querySelector('.project-details');
             details.style.maxHeight = 'none'; // temporarily remove limit
             details.style.maxHeight = details.scrollHeight + 'px'; // set to new full height
+
+            // Also update the projects content container if this card is inside the projects section
+            const projectsSection = card.closest('#projects');
+            const projectsContent = projectsSection ? document.getElementById('projects-content') : null;
+            if (projectsContent) {
+                setTimeout(() => {
+                    setProjectsContentHeight(projectsContent);
+                }, 350);
+            }
         }
         
         // Respect system preference if no localStorage
