@@ -166,15 +166,23 @@
             height: 400px;
             overflow: hidden;
             border-radius: 12px;
-            opacity: 0.50;
+            opacity: 0.10;
             pointer-events: none;
         }
+
+        .hero-carousel-1 { top: 20%; height: 130px; opacity: 0.08; }
+        .hero-carousel-2 { top: 50%; height: 160px; opacity: 0.08; }
+        .hero-carousel-3 { top: 80%; height: 130px; opacity: 0.08; }
 
         .carousel-track {
             display: flex;
             animation: scroll-infinite 30s linear infinite;
             will-change: transform;
         }
+
+        .carousel-track-slow { animation-duration: 42s; }
+        .carousel-track-fast { animation-duration: 24s; }
+        .carousel-track-reverse { animation-direction: reverse; }
 
         .carousel-item {
             flex-shrink: 0;
@@ -259,7 +267,51 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col items-center justify-center p-6 pt-20 relative">
+    <section class="min-h-screen flex flex-col items-center justify-center p-6 pt-20 relative overflow-hidden">
+        <div class="carousel-container hero-carousel-1">
+            <div class="carousel-track carousel-track-slow">
+                <div class="carousel-item"><img src="images/Evolve/city.png" alt="Evolve"></div>
+                <div class="carousel-item"><img src="images/Blind/blindCave.png" alt="Blind"></div>
+                <div class="carousel-item"><img src="images/VacuumVoyagers/vacuumVOyagers.png" alt="Vacuum Voyagers"></div>
+                <div class="carousel-item"><img src="images/Teocalli/Logo.png" alt="Teocalli"></div>
+                <div class="carousel-item"><img src="images/MiniMe/MiniMeIsoLeft.png" alt="MiniMe"></div>
+                <div class="carousel-item"><img src="images/Teocalli/titlescreen.png" alt="Teocalli Title"></div>
+                <div class="carousel-item"><img src="images/Evolve/city.png" alt="Evolve"></div>
+                <div class="carousel-item"><img src="images/Blind/blindCave.png" alt="Blind"></div>
+                <div class="carousel-item"><img src="images/VacuumVoyagers/vacuumVOyagers.png" alt="Vacuum Voyagers"></div>
+                <div class="carousel-item"><img src="images/Teocalli/Logo.png" alt="Teocalli"></div>
+            </div>
+        </div>
+
+        <div class="carousel-container hero-carousel-2">
+            <div class="carousel-track carousel-track-fast carousel-track-reverse">
+                <div class="carousel-item"><img src="images/Teocalli/air.png" alt="Air"></div>
+                <div class="carousel-item"><img src="images/Teocalli/fire.png" alt="Fire"></div>
+                <div class="carousel-item"><img src="images/MiniMe/MiniMeIsoLeft.png" alt="MiniMe"></div>
+                <div class="carousel-item"><img src="images/Evolve/city.png" alt="Evolve"></div>
+                <div class="carousel-item"><img src="images/VacuumVoyagers/vacuumVOyagers.png" alt="Vacuum Voyagers"></div>
+                <div class="carousel-item"><img src="images/Blind/blindCave.png" alt="Blind"></div>
+                <div class="carousel-item"><img src="images/Teocalli/air.png" alt="Air"></div>
+                <div class="carousel-item"><img src="images/Teocalli/fire.png" alt="Fire"></div>
+                <div class="carousel-item"><img src="images/MiniMe/MiniMeIsoLeft.png" alt="MiniMe"></div>
+                <div class="carousel-item"><img src="images/Evolve/city.png" alt="Evolve"></div>
+            </div>
+        </div>
+
+        <div class="carousel-container hero-carousel-3">
+            <div class="carousel-track carousel-track-slow">
+                <div class="carousel-item"><img src="images/Teocalli/watere.png" alt="Water"></div>
+                <div class="carousel-item"><img src="images/Teocalli/titlescreen.png" alt="Teocalli Title"></div>
+                <div class="carousel-item"><img src="images/VacuumVoyagers/vacuumVOyagers.png" alt="Vacuum Voyagers"></div>
+                <div class="carousel-item"><img src="images/Blind/blindCave.png" alt="Blind"></div>
+                <div class="carousel-item"><img src="images/Teocalli/Logo.png" alt="Teocalli"></div>
+                <div class="carousel-item"><img src="images/MiniMe/MiniMeIsoLeft.png" alt="MiniMe"></div>
+                <div class="carousel-item"><img src="images/Teocalli/watere.png" alt="Water"></div>
+                <div class="carousel-item"><img src="images/Teocalli/titlescreen.png" alt="Teocalli Title"></div>
+                <div class="carousel-item"><img src="images/VacuumVoyagers/vacuumVOyagers.png" alt="Vacuum Voyagers"></div>
+                <div class="carousel-item"><img src="images/Blind/blindCave.png" alt="Blind"></div>
+            </div>
+        </div>
         
         <main class="max-w-md w-full flex flex-col items-center text-center space-y-8 fade-in">
             <!-- Logo -->
