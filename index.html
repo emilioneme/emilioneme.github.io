@@ -158,24 +158,23 @@
         /* Carousel styling */
         .carousel-container {
             position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            left: 0;
             z-index: 10;
-            width: 100vw;
-            height: 500px;
+            width: 100%;
+            height: 33.333vh;
             overflow: hidden;
             border-radius: 12px;
             opacity: 0.10;
             pointer-events: none;
         }
 
-        .hero-carousel-1 { top: 30%; height: 500vx; opacity: 0.08; }
-        .hero-carousel-2 { top: 60%; height: 500vx; opacity: 0.08; }
-        .hero-carousel-3 { top: 90%; height: 500vx; opacity: 0.08; }
+        .hero-carousel-1 { top: 0; opacity: 0.08; }
+        .hero-carousel-2 { top: 33.333vh; opacity: 0.08; }
+        .hero-carousel-3 { top: 66.666vh; opacity: 0.08; }
 
         .carousel-track {
             display: flex;
+            height: 100%;
             animation: scroll-infinite 30s linear infinite;
             will-change: transform;
         }
@@ -188,7 +187,7 @@
         .carousel-item {
             flex-shrink: 0;
             width: 300px;
-            height: 200px;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -273,13 +272,12 @@
             <div class="carousel-track carousel-track-med">
                 <div class="carousel-item"><img src="images/VacuumVoyagers/lsIou3.png" alt="Vacuum Voyagers"></div>
                 <div class="carousel-item"><img src="images/Teocalli/Logo.png" alt="Teocalli"></div>
-                <div class="carousel-item"><img src="images/Blind/blindCave.png" alt="Panopticon"></div>
                 <div class="carousel-item"><img src="images/Megablyte/faceNoised.png" alt="Megablyte"></div>
                 <div class="carousel-item"><img src="images/Nearmiss/nearmissGamplay1.png" alt="Nearmiss"></div>
                 <div class="carousel-item"><img src="images/Evolve/city.png" alt="Evolve"></div>
-                <div class="carousel-item"><img src="images/Blind/blindCave.png" alt="Blind"></div>
                 <div class="carousel-item"><img src="images/Asphyxiatus/8tSsx5.png" alt="Asphyxiatus"></div>
                 <div class="carousel-item"><img src="images/OddJob/oddJob.gif" alt="OddJob"></div>
+                <div class="carousel-item"><img src="images/Blind/blindCave.png" alt="Panopticon"></div>
                 <div class="carousel-item"><img src="images/Teocalli/fire.png" alt="Teocalli"></div>
                 <div class="carousel-item"><img src="images/Blind/cave3.png" alt="Blind"></div>
                 <div class="carousel-item"><img src="images/Evolve/map.png" alt="Evolve"></div>
@@ -289,11 +287,11 @@
         <div class="carousel-container hero-carousel-2">
             <div class="carousel-track carousel-track-fast carousel-track-reverse">
                 <div class="carousel-item"><img src="images/Evolve/city.png" alt="Evolve"></div>
-                <div class="carousel-item"><img src="images/Blind/blindCave.png" alt="Blind"></div>
                 <div class="carousel-item"><img src="images/VacuumVoyagers/lsIou3.png" alt="Vacuum Voyagers"></div>
                 <div class="carousel-item"><img src="images/Teocalli/Logo.png" alt="Teocalli"></div>
                 <div class="carousel-item"><img src="images/Blind/blindCave.png" alt="Panopticon"></div>
                 <div class="carousel-item"><img src="images/OddJob/oddJob.gif" alt="OddJob"></div>
+                <div class="carousel-item"><img src="images/Blind/blindCave.png" alt="Blind"></div>
                 <div class="carousel-item"><img src="images/Megablyte/faceNoised.png" alt="Megablyte"></div>
                 <div class="carousel-item"><img src="images/Nearmiss/nearmissGamplay1.png" alt="Nearmiss"></div>
                 <div class="carousel-item"><img src="images/Asphyxiatus/8tSsx5.png" alt="Asphyxiatus"></div>
