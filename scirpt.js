@@ -78,7 +78,6 @@ if (projectsAnchor) {
 // Toggle projects section
 let projectsSectionExpanded = false; // Start collapsed
 const projectsExtraHeight = 180;
-
 function setProjectsContentHeight(contentEl) {
 	if (!contentEl) return;
 	contentEl.style.maxHeight = (contentEl.scrollHeight + projectsExtraHeight) + 'px';
@@ -384,6 +383,17 @@ function resolveProjectCardConfig(entry) {
 	};
 }
 
+function removeViewDetailsCta(contentHtml) {
+	if (!contentHtml) return contentHtml;
+	const wrapper = document.createElement('div');
+	wrapper.innerHTML = contentHtml;
+	const detailsIcon = wrapper.querySelector('.project-icon');
+	if (detailsIcon && detailsIcon.parentElement) {
+		detailsIcon.parentElement.remove();
+	}
+	return wrapper.innerHTML;
+}
+
 function createProjectCardElement(projectCard) {
 	const cardEl = document.createElement('div');
 	cardEl.className = projectCard.cardClasses;
@@ -557,6 +567,57 @@ function renderProjectCardsFromData(projectCardsData) {
 	});
 }
 
+function getProjectCardsSourceData() {
+	if (Array.isArray(window.projectCardsResolvedData) && window.projectCardsResolvedData.length > 0) {
+		return window.projectCardsResolvedData;
+	}
+	return Array.isArray(window.projectCardsData) ? window.projectCardsData : [];
+}
+
+function renderEmbeddedProjectCardCollections() {
+	const sourceData = getProjectCardsSourceData();
+	if (!Array.isArray(sourceData) || sourceData.length === 0) return;
+
+	const entriesById = new Map();
+	sourceData.forEach(entry => {
+		const cardId = entry && entry.cardId;
+		if (cardId) entriesById.set(cardId, entry);
+	});
+
+	document.querySelectorAll('[data-project-card-ids]').forEach(container => {
+		const ids = (container.dataset.projectCardIds || '')
+			.split(',')
+			.map(value => value.trim())
+			.filter(Boolean);
+
+		container.innerHTML = '';
+
+		ids.forEach(cardId => {
+			const entry = entriesById.get(cardId);
+			if (!entry) return;
+
+			const config = resolveProjectCardConfig(entry);
+			const embeddedContentHtml = (entry.title || entry.description || Array.isArray(entry.tags))
+				? buildProjectCardContentHtml({
+					title: entry.title,
+					description: entry.description,
+					tags: entry.tags || [],
+					showViewDetails: false
+				})
+				: removeViewDetailsCta(config.contentHtml);
+
+			const embeddedCard = new ProjectCard({
+				...config,
+				contentHtml: embeddedContentHtml,
+				isExpandable: false,
+				detailsHtml: ''
+			});
+
+			container.appendChild(createProjectCardElement(embeddedCard));
+		});
+	});
+}
+
 function initializeProjectCardsData() {
 	const externalData = Array.isArray(window.projectCardsData) ? window.projectCardsData : [];
 	const defaultData = getDefaultProjectCardsDataFromDom();
@@ -615,6 +676,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
 async function bootstrapProjectCards() {
 	await loadProjectDetailsTemplates();
 	initializeProjectCardsData();
+	renderEmbeddedProjectCardCollections();
 	renderAllProjectCards();
 }
 
