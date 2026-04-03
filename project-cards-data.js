@@ -1,4 +1,27 @@
 window.projectCardsData = window.projectCardsData || [
+	//BugOut
+	{
+		cardId: 'bugout',
+		containerSelector: '#spotlight .space-y-6',
+		title: 'BugOut',
+		description: 'Beat them up, punch out style game. Upgrade your bug with spidernetic enhancmenets and fight against other bugs to become the champion.',
+		tags: ['Unity', 'C#', '2024-2025'],
+		thumbnail: {
+			src: 'images/BugOut/BugOutThubnail.png',
+			alt: 'Bug-Out Logo'
+		},
+		detailsTemplateId: 'details-template-bugout',
+		links: [
+			{
+				href: 'https://megablyte.itch.io/bugout',
+				label: 'Find on Itch.io',
+				icon: 'external-link',
+				target: '_blank'
+			}
+		],
+		isExpandable: true
+	},
+
     //Evolve.exe
 	{
 		cardId: 'evolve',
@@ -21,7 +44,7 @@ window.projectCardsData = window.projectCardsData || [
 			{
 				href: 'https://github.com/emilioneme/EVOLVE.exe',
 				label: 'Source Code',
-				icon: 'github',
+				icon: 'cloud',
 				target: '_blank'
 			}
 		],
@@ -72,7 +95,7 @@ window.projectCardsData = window.projectCardsData || [
 			{
 				href: 'https://github.com/emilioneme/Nearmiss',
 				label: 'Source Code',
-				icon: 'github',
+				icon: 'cloud',
 				target: '_blank'
 			}
 		],
@@ -101,7 +124,7 @@ window.projectCardsData = window.projectCardsData || [
 			{
 				href: 'https://github.com/emilioneme/GJ26',
 				label: 'Source Code',
-				icon: 'github',
+				icon: 'cloud',
 				target: '_blank'
 			}
 		],
@@ -130,7 +153,7 @@ window.projectCardsData = window.projectCardsData || [
 			{
 				href: 'https://github.com/shtoa/OddJob',
 				label: 'Source Code',
-				icon: 'github',
+				icon: 'cloud',
 				target: '_blank'
 			}
 		],
@@ -159,7 +182,7 @@ window.projectCardsData = window.projectCardsData || [
 			{
 				href: 'https://github.com/Alastairrd/Unity20thAnniversaryGameJam-Timeless-2025',
 				label: 'Source Code',
-				icon: 'github',
+				icon: 'cloud',
 				target: '_blank'
 			}
 		],
@@ -211,7 +234,7 @@ window.projectCardsData = window.projectCardsData || [
 			{
 				href: 'https://github.com/emilioneme/GJ26',
 				label: 'Source Code',
-				icon: 'github',
+				icon: 'cloud',
 				target: '_blank'
 			}
 		],
@@ -234,13 +257,13 @@ window.projectCardsData = window.projectCardsData || [
 			{
 				href: 'https://github.com/emilioneme/DataAndMachineProject/settings',
 				label: 'Source Code',
-				icon: 'github',
+				icon: 'cloud',
 				target: '_blank'
 			},
 			{
 				href: 'https://github.com/emilioneme/DMLCP',
 				label: 'Course Fork',
-				icon: 'github',
+				icon: 'cloud',
 				target: '_blank'
 			}
 		],
@@ -269,7 +292,7 @@ window.projectCardsData = window.projectCardsData || [
 			{
 				href: 'https://github.com/emilioneme/BLIND',
 				label: 'Source Code',
-				icon: 'github',
+				icon: 'cloud',
 				target: '_blank'
 			}
 		],
@@ -298,7 +321,7 @@ window.projectCardsData = window.projectCardsData || [
 			{
 				href: 'https://github.com/emilioneme/VacuumVoyager',
 				label: 'Source Code',
-				icon: 'github',
+				icon: 'cloud',
 				target: '_blank'
 			}
 		],
@@ -324,12 +347,6 @@ window.projectCardsData = window.projectCardsData || [
 				icon: 'link',
 				target: '_blank'
 			},
-			{
-				href: 'https://github.com',
-				label: 'Git On the Making',
-				icon: 'github',
-				target: '_blank'
-			}
 		],
 		isExpandable: true
 	}

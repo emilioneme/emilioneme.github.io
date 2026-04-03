@@ -445,7 +445,7 @@
                 Much like an art collective, we aim to build a community of digital creators. Opening a space for collaboration, learning, and sharing of knowledge. We aim to foster a community where people collaborate, share their work, and learn from one another.
             </p>
         </div>
-        <div class="grid gap-4 overflow-auto project-grid-columns" data-project-card-ids="panopticon,oddjob,till-nightfall,asphyxiatus"></div>
+        <div class="grid gap-4 overflow-auto project-grid-columns" data-project-card-ids="bugout,panopticon,oddjob,till-nightfall,asphyxiatus"></div>
     </div>
 </template>
 
@@ -467,6 +467,33 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
         </iframe>
+    </div>
+</template>
+
+<!-- BugOut -->
+<template id="details-template-bugout">
+    <div class="p-6 space-y-6">
+        <iframe 
+                src="https://www.youtube.com/embed/2kkxeswsh4Q?si=SJV_TFs7lQQQGMt2" 
+                class="w-full max-w-[600px] aspect-video border border-black/10 dark:border-white/10 bg-black mx-auto block"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+        <div class="prose prose-sm max-w-none">
+            <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="toggleSection(this, 'toggle-images')">
+                <h3 class="text-lg font-semibold uppercase tracking-wider"></h3>
+                <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 panopticon-icon"></i>
+            </div>
+            <div class="toggle-images py-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <img src="images/BugOut/manits.png"             alt="eye"      class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                    <img src="images/BugOut/characterselect.png"       alt="inmates"    class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                    <img src="images/BugOut/upgrades.png"            alt="tower"        class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                    <img src="images/BugOut/spider2.png"        alt="tower"        class="w-full h-full object-contain border border-black/10 dark:border-white/10 brightness-75 hover:brightness-100 hover:scale-105 transition-all">
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
