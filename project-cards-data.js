@@ -73,35 +73,6 @@ window.projectCardsData = window.projectCardsData || [
 		isExpandable: true
 	},
 
-    //Nearmiss 
-	{
-		cardId: 'nearmiss',
-		containerSelector: '#projects .space-y-6',
-		title: 'Nearmiss',
-		description: 'Live on edge, by flying a paper airplane into buildings without crashing.',
-		tags: ['Unity', 'C#', 'Git', '2026'],
-		thumbnail: {
-			src: 'images/Nearmiss/OldNEarmissMenu.png',
-			alt: 'Nearmiss'
-		},
-		detailsTemplateId: 'details-template-nearmiss',
-		links: [
-			{
-				href: 'https://eneme22.itch.io/nearmiss',
-				label: 'Find on Itch.io',
-				icon: 'external-link',
-				target: '_blank'
-			},
-			{
-				href: 'https://github.com/emilioneme/Nearmiss',
-				label: 'Source Code',
-				icon: 'cloud',
-				target: '_blank'
-			}
-		],
-		isExpandable: true
-	},
-
     //Panopticon
 	{
 		cardId: 'panopticon',
@@ -123,6 +94,35 @@ window.projectCardsData = window.projectCardsData || [
 			},
 			{
 				href: 'https://github.com/emilioneme/GJ26',
+				label: 'Source Code',
+				icon: 'cloud',
+				target: '_blank'
+			}
+		],
+		isExpandable: true
+	},
+
+	//Nearmiss 
+	{
+		cardId: 'nearmiss',
+		containerSelector: '#projects-content .project-grid-columns',
+		title: 'Nearmiss',
+		description: 'Quick prottoype made for exploring game feel and UI animations.',
+		tags: ['Unity', 'C#', 'Git', '2026'],
+		thumbnail: {
+			src: 'images/Nearmiss/DistortedVersion.png',
+			alt: 'Nearmiss'
+		},
+		detailsTemplateId: 'details-template-nearmiss',
+		links: [
+			{
+				href: 'https://eneme22.itch.io/nearmiss',
+				label: 'Find on Itch.io',
+				icon: 'external-link',
+				target: '_blank'
+			},
+			{
+				href: 'https://github.com/emilioneme/Nearmiss',
 				label: 'Source Code',
 				icon: 'cloud',
 				target: '_blank'
