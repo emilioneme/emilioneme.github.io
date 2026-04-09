@@ -76,7 +76,7 @@ if (projectsAnchor) {
 }
 
 // Toggle projects section
-let projectsSectionExpanded = false; // Start collapsed
+let projectsSectionExpanded = false; // Start collapsed, animated open after bootstrap
 const projectsExtraHeight = 180;
 function setProjectsContentHeight(contentEl) {
 	if (!contentEl) return;
@@ -680,7 +680,14 @@ async function bootstrapProjectCards() {
 	renderAllProjectCards();
 }
 
-bootstrapProjectCards();
+bootstrapProjectCards().then(() => {
+	// Double rAF ensures the browser commits max-height:0 before the transition starts
+	requestAnimationFrame(() => {
+		requestAnimationFrame(() => {
+			expandProjectsSection();
+		});
+	});
+});
 
 // Floater
 (function () {

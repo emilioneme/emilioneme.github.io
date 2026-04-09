@@ -76,7 +76,7 @@ window.projectCardsData = window.projectCardsData || [
     //Nearmiss 
 	{
 		cardId: 'nearmiss',
-		containerSelector: '#latest .space-y-6',
+		containerSelector: '#projects .space-y-6',
 		title: 'Nearmiss',
 		description: 'Live on edge, by flying a paper airplane into buildings without crashing.',
 		tags: ['Unity', 'C#', 'Git', '2026'],
