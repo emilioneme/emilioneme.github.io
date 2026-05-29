@@ -691,6 +691,10 @@ bootstrapProjectCards().then(() => {
 
 // Floater
 (function () {
+	// Skip the bouncing floater on mobile and touch-first devices.
+	const disableFloaterOnMobile = window.matchMedia('(max-width: 720px), (pointer: coarse)').matches;
+	if (disableFloaterOnMobile) return;
+
 	const speed = 180;
 	let currentSize = 200;
 
